@@ -1,5 +1,7 @@
 # Fish·Oh My Posh·Herdr·Aside·Paseo 추가 설치 가이드
 
+> 2026-09-11 후속 적용: 기본 셸과 개발 환경은 Fish로 변경했다. 아래 과거 Zsh 운영 방침은 [계획 16](16-fish-catppuccin-lsd.md)이 대체한다. nvm·SDKMAN은 Bass로 연동하고 테마는 Catppuccin Mocha를 사용한다.
+
 ## 적용 범위와 현재 상태
 
 2026-09-06 공식 설치·설정 문서를 검색하고 본문을 읽어 작성했다. Herdr는 사용자가 지정한 [herdr.dev](https://herdr.dev/)의 제품이다. 최신 정식 배포를 우선한다. 아래 명령은 새 Mac mini의 향후 설치 절차이며 이번 조사에서 실행하지 않았다. 설치·앱 실행·서비스 시작·테스트·OMO QA는 하지 않았다.

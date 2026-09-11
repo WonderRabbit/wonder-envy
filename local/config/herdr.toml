@@ -1,4 +1,8 @@
+[theme]
+name = "catppuccin"
+auto_switch = false
+
 [terminal]
-default_shell = "/bin/zsh"
+default_shell = "/opt/homebrew/bin/fish"
 shell_mode = "login"
 new_cwd = "follow"

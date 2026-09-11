@@ -1,5 +1,7 @@
 # 셸과 터미널 이전 계획
 
+> 2026-09-11 후속 적용: 기본 셸과 개발 환경은 Fish로 변경했다. 아래 과거 Zsh 운영 방침은 [계획 16](16-fish-catppuccin-lsd.md)이 대체한다. nvm·SDKMAN은 Bass로 연동하고 테마는 Catppuccin Mocha를 사용한다.
+
 ## 적용 원칙과 조사 범위
 
 런타임 초기화는 후속 확정된 [SDKMAN·nvm·pyenv·uv 설치 계획](11-runtime-managers.md)의 Zsh 예시를 우선한다. pyenv shims는 사용하고, Conda 자동 활성화·옛 Hermes Node 링크는 복원하지 않는다.

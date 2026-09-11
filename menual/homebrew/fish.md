@@ -8,7 +8,7 @@
 
 ```sh
 fish
-# Node/Java 작업은 dev로 Zsh에 진입
+# Node/Java/Python을 이 Fish에서 직접 실행
 ```
 
 제공 명령: `fish`, `fish_indent`, `fish_key_reader`.
@@ -19,3 +19,5 @@ fish
 
 - [공식 홈페이지](https://fishshell.com)
 - [Homebrew 배포 정보](https://formulae.brew.sh/formula/fish)
+
+기본 로그인 셸과 런타임 연동·테마는 [Fish 상세 문서](../fish-and-themes.md)를 따른다.

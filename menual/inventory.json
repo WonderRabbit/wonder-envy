@@ -656,6 +656,15 @@
     "homepage": "https://www.inf.puc-rio.br/~roberto/lpeg/"
   },
   {
+    "name": "lsd",
+    "versions": "1.2.0",
+    "category": "명시적 설치 도구",
+    "commands": [
+      "lsd"
+    ],
+    "homepage": "https://github.com/lsd-rs/lsd"
+  },
+  {
     "name": "luajit",
     "versions": "2.1.1788856981",
     "category": "의존성으로 설치",

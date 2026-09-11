@@ -21,7 +21,7 @@ nvim README.md
 
 키는 [공식 키맵](https://www.lazyvim.org/keymaps)과 설치된 버전의 안내를 기준으로 한다. 이전 최소 설정의 `Space l g`는 Lazy 관리 키와 겹쳐 이관하지 않았다. 별도 `lazygit.nvim`을 중복 설치하지 않았고 기본 picker를 사용한다. 셸 `lg`는 계속 사용할 수 있다.
 
-Yazi에서 텍스트를 열면 blocking opener로 같은 `nvim`을 실행한다. 저장하고 종료하면 Yazi로 돌아온다. `EDITOR`와 `VISUAL`도 `nvim`이다. Node·Java 기반 개발은 `dev`로 진입한 Zsh에서 실행한다.
+Yazi에서 텍스트를 열면 blocking opener로 같은 `nvim`을 실행한다. 저장하고 종료하면 Yazi로 돌아온다. `EDITOR`와 `VISUAL`도 `nvim`이다. Node·Java 기반 개발도 Fish에서 직접 실행한다. 테마는 `catppuccin-mocha`이며 [Fish·테마 문서](fish-and-themes.md)에 설정 위치를 정리했다.
 
 플러그인 버전은 `local/nvim/lazy-lock.json`에 기록한다. 업데이트 후에는 실제 lockfile을 이 사본에도 반영한다. LazyVim starter의 LICENSE와 출처 commit은 `local/nvim/`에 보존했다. 이력과 소스만 보관하며 다운로드된 플러그인 전체는 Git에 넣지 않는다.
 

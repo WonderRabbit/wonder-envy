@@ -1,4 +1,4 @@
-# Managed local development profile. Login shell remains macOS Zsh.
+# Optional Zsh compatibility profile. Fish is the primary shell.
 typeset -U path PATH
 path=("$HOME/.local/bin" /opt/homebrew/bin /opt/homebrew/sbin $path)
 export EDITOR=nvim

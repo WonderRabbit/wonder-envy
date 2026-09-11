@@ -42,11 +42,11 @@ with tempfile.TemporaryDirectory(prefix="wonder-envy-check-") as tmp:
     (repo / "mise.toml").write_text('[tasks.env-paths]\nrun = "command -v node; command -v python; command -v java"\n')
     run(["mise", "trust", str(repo / "mise.toml")], repo)
     try:
-        paths = run(["zsh", "-lic", "mise run env-paths"], repo)
+        paths = run(["fish", "-lc", "mise run env-paths"], repo)
         assert "/.nvm/" in paths and "/.pyenv/" in paths and "/.sdkman/" in paths, paths
     finally:
         run(["mise", "untrust", str(repo / "mise.toml")], repo)
-    results["mise"] = "Task preserves nvm/pyenv/SDKMAN paths"
+    results["mise"] = "Fish task preserves nvm/pyenv/SDKMAN paths"
 
     class Handler(BaseHTTPRequestHandler):
         def do_GET(self):

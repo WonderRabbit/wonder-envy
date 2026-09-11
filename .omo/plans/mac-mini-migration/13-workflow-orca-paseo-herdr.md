@@ -1,5 +1,7 @@
 # Orca·Paseo와 Herdr 기반 개발 작업 구성
 
+> 2026-09-11 후속 적용: 기본 셸과 개발 환경은 Fish로 변경했다. 아래 과거 Zsh 운영 방침은 [계획 16](16-fish-catppuccin-lsd.md)이 대체한다. nvm·SDKMAN은 Bass로 연동하고 테마는 Catppuccin Mocha를 사용한다.
+
 ## 목표와 확정 사항
 
 2026-09-06 사용자 의도를 반영한 작업 구성 문서다. **Orca + Herdr 또는 Paseo + Herdr**를 사용하고, 파일 탐색은 Yazi, 편집은 Neovim, Git 작업은 lazygit을 중심으로 한다. 독립 터미널 앱은 Ghostty이며 tmux는 설치·복원하지 않는다.

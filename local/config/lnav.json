@@ -1,0 +1,165 @@
+{
+  "$schema": "https://lnav.org/schemas/config-v1.schema.json",
+  "ui": {
+    "theme": "catppuccin-mocha",
+    "theme-defs": {
+      "catppuccin-mocha": {
+        "styles": {
+          "text": {
+            "color": "#cdd6f4",
+            "background-color": "#1e1e2e"
+          },
+          "selected-text": {
+            "background-color": "#313244"
+          },
+          "fuzzy-match": {
+            "color": "#f9e2af"
+          },
+          "error": {
+            "color": "#f38ba8"
+          },
+          "ok": {
+            "color": "#a6e3a1"
+          },
+          "info": {
+            "color": "#cdd6f4"
+          },
+          "warning": {
+            "color": "#f9e2af"
+          },
+          "hidden": {
+            "color": "#f9e2af"
+          },
+          "disabled-cursor-line": {
+            "background-color": "#5f005f"
+          },
+          "adjusted-time": {
+            "color": "#f38ba8"
+          },
+          "skewed-time": {
+            "color": "#f9e2af"
+          },
+          "file-offset": {
+            "color": "#cdd6f4"
+          },
+          "offset-time": {
+            "color": "#94e2d5"
+          },
+          "time-column": {
+            "background-color": "#aaa"
+          },
+          "invalid-msg": {
+            "color": "#f9e2af"
+          },
+          "popup": {
+            "color": "#cdd6f4"
+          },
+          "popup-border": {
+            "color": "#cba6f7"
+          },
+          "focused": {
+            "color": "#1e1e2e",
+            "background-color": "#cdd6f4"
+          },
+          "disabled-focused": {
+            "color": "#1e1e2e",
+            "background-color": "#888"
+          },
+          "scrollbar": {
+            "color": "#1e1e2e",
+            "background-color": "#cdd6f4"
+          },
+          "hr": {
+            "color": "#444"
+          },
+          "list-glyph": {
+            "color": "#f9e2af"
+          },
+          "breadcrumb": {
+            "color": "#94e2d5"
+          },
+          "table-border": {
+            "color": "#444"
+          },
+          "quote-border": {
+            "color": "#666",
+            "background-color": "#444"
+          },
+          "quoted-text": {
+            "background-color": "#444"
+          },
+          "footnote-border": {
+            "color": "#89b4fa",
+            "background-color": "#444"
+          },
+          "footnote-text": {
+            "color": "#eee",
+            "background-color": "#444"
+          },
+          "snippet-border": {
+            "color": "#94e2d5"
+          },
+          "indent-guide": {
+            "color": "#444"
+          },
+          "timeline-bar": {
+            "background-color": "#94e2d5"
+          }
+        },
+        "status-styles": {
+          "text": {
+            "color": "#1e1e2e",
+            "background-color": "#cdd6f4"
+          },
+          "warn": {
+            "color": "#f9e2af",
+            "background-color": "#cdd6f4"
+          },
+          "alert": {
+            "color": "#f38ba8",
+            "background-color": "#cdd6f4"
+          },
+          "active": {
+            "color": "#a6e3a1",
+            "background-color": "#cdd6f4"
+          },
+          "inactive-warn": {
+            "color": "#f9e2af"
+          },
+          "inactive-alert": {
+            "color": "#f38ba8"
+          },
+          "inactive": {
+            "color": "#cdd6f4"
+          },
+          "title-hotkey": {
+            "color": "#94e2d5",
+            "background-color": "#89b4fa"
+          },
+          "title": {
+            "color": "#cdd6f4",
+            "background-color": "#89b4fa"
+          },
+          "alert-title": {
+            "color": "#f38ba8",
+            "background-color": "#89b4fa"
+          },
+          "disabled-title": {
+            "color": "#1e1e2e",
+            "background-color": "#cdd6f4"
+          },
+          "subtitle": {
+            "color": "#1e1e2e",
+            "background-color": "#94e2d5"
+          },
+          "info": {
+            "color": "#cdd6f4"
+          },
+          "hotkey": {
+            "color": "#cba6f7"
+          }
+        }
+      }
+    }
+  }
+}

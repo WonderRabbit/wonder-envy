@@ -2,6 +2,7 @@
 
 2026-09-11 실제 설치 목록 기준. 사용자가 지정한 `menual/` 이름을 사용한다. 아래 Homebrew 항목은 직접 설치한 도구와 모든 전이 의존성을 포함한다. 수동 설치 CLI·런타임·GUI 앱은 별도 문서에 정리한다. macOS가 기본 제공하는 수천 개의 시스템 실행 파일은 별도 제품 설치 목록으로 세지 않는다.
 
+- [Fish 기본 셸·Catppuccin·lsd](fish-and-themes.md)
 - [일상 개발 흐름과 추가 6종](workflow.md)
 - [LazyVim 상세 사용법](lazyvim.md)
 - [런타임·Python 도구·AI CLI](runtimes-and-ai.md)
@@ -74,6 +75,7 @@
 | [llhttp](homebrew/llhttp.md) | 9.4.3 | 의존성으로 설치 |
 | [lnav](homebrew/lnav.md) | 0.14.1 | 명시적 설치 도구 |
 | [lpeg](homebrew/lpeg.md) | 1.1.0_2 | 의존성으로 설치 |
+| [lsd](homebrew/lsd.md) | 1.2.0 | 명시적 설치 도구 |
 | [luajit](homebrew/luajit.md) | 2.1.1788856981 | 의존성으로 설치 |
 | [luv](homebrew/luv.md) | 1.52.1-0 | 의존성으로 설치 |
 | [lz4](homebrew/lz4.md) | 1.10.0 | 의존성으로 설치 |

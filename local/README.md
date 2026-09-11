@@ -1,10 +1,14 @@
 # 로컬 개발 환경 적용 결과
 
+## Fish·Catppuccin·lsd 후속 적용 (2026-09-11)
+
+macOS 로그인 셸·Terminal·Ghostty·Herdr의 기본값을 Fish로 변경했다. nvm·SDKMAN은 Bass로 Fish와 연동하며 Node·Python·Java·uv 통합 검증을 통과했다. lsd 1.2.0을 설치하고 지원 CLI에 Catppuccin Mocha를 적용했다. 자세한 [사용법·테마·복구](../menual/fish-and-themes.md), [계획 16](../.omo/plans/mac-mini-migration/16-fish-catppuccin-lsd.md), [체크리스트](INSTALL-CHECKLIST.md)를 참고한다.
+
 ## 추가 설치 반영 (2026-09-11)
 
 최신 상태는 [설치 체크리스트](INSTALL-CHECKLIST.md), 사용법은 [menual](../menual/README.md)을 기준으로 한다. LazyVim·tree-sitter-cli·Worktrunk·Atuin·mise·Hurl·lnav·difftastic을 설치했다. 아래 기본 환경 기록 중 최소 Neovim 구성은 이제 LazyVim으로 대체되었다.
 
-Neovim 원본은 `local/nvim/`, 실제 설정은 `~/.config/nvim`이다. `apply-config.py`에서 Neovim 복사를 제외했으며 현재 10개 셸·도구 설정만 관리한다. 새 설정은 Atuin, mise Fish activation 차단, Worktrunk Fish autoload·completion이다.
+Neovim 원본은 `local/nvim/`, 실제 설정은 `~/.config/nvim`이다. `apply-config.py`는 전체 Neovim 덮어쓰기를 하지 않고, 선택한 colorscheme 플러그인 설정과 셸·도구·테마 파일을 관리한다. 새 설정은 Atuin, mise Fish activation 차단, Worktrunk Fish autoload·completion이다.
 
 LazyVim 전환 백업은 `~/.local/state/wonder-envy/backups/lazyvim-20260911-130603/`에 있다. Fish의 mise 자동 activation과 중첩 로그인 Zsh의 Java 경로 순서 문제를 수정했다. GitHub SSH 인증 계정의 noreply identity를 저장소 로컬 설정으로 추가했으며 전역 identity는 바꾸지 않았다.
 
@@ -24,7 +28,7 @@ LazyVim 전환 백업은 `~/.local/state/wonder-envy/backups/lazyvim-20260911-13
 | Java | SDKMAN 5.23.0, Temurin `26.0.2-tem` 설치 및 기본값 지정 |
 | Bash | SDKMAN 설치자가 Bash 4 이상을 요구하여 Homebrew Bash 5.3.15 추가 |
 | 터미널 | 기존 Ghostty 1.3.1·Herdr 0.9.0 사용, JetBrainsMono Nerd Font 설치 |
-| 셸 | Fish 4.9.3, Oh My Posh 31.2.1; 로그인 셸은 Zsh 유지 |
+| 셸 | Fish 4.9.3, Oh My Posh 31.2.1; 로그인 셸은 Fish로 변경 |
 | 편집 및 Git | Neovim 0.12.5, 기존 Yazi 26.9.1·lazygit 0.65.0, gh 2.100.0으로 갱신 |
 | Python CLI | pyenv Python을 지정해 uv tool로 Poetry 2.4.3, IPython 9.17.1, Pygments 2.21.0 설치 |
 | AI CLI | nvm npm의 Codex 0.154.0·OpenCode 1.18.30, 네이티브 stable Claude Code 2.1.236 |
@@ -42,7 +46,7 @@ Homebrew 공통 설치 목록은 [Brewfile](Brewfile)에 있다. eza·fd·fzf·s
 
 ## 사용 방법
 
-새 Ghostty 창은 Fish와 Oh My Posh를 사용한다. Node·Java 작업은 Fish에서 `dev`를 실행해 Zsh 개발 셸로 전환한다. Herdr의 새 pane은 로그인 Zsh로 시작하므로 nvm·SDKMAN·pyenv가 초기화된다.
+새 터미널은 Fish와 Oh My Posh를 사용한다. Node·Java·Python 작업을 Fish에서 직접 실행한다. Herdr의 새 pane도 로그인 Fish로 시작한다.
 
 ```sh
 cd ~/Workspace/Projects/wonder-envy
@@ -51,20 +55,20 @@ herdr
 
 | 명령 | 동작 |
 | --- | --- |
-| `dev` | Fish에서 `zsh -il` 개발 셸 시작; `exit`로 복귀 |
+| `dev` | 새 로그인 Fish 시작; 일반 개발에는 전환 불필요 |
 | `y` | Yazi 실행 후 선택한 디렉터리로 부모 셸 이동 |
 | `nvim` 또는 `vim` | Neovim 실행 |
 | `lg` | lazygit 실행 |
-| Neovim `Space`, `l`, `g` | 현재 디렉터리의 lazygit을 새 터미널 탭에서 열기 |
-| `ll` | eza로 숨김 파일·Git 정보를 포함한 상세 목록 |
+| Neovim `Space`, `g`, `g` | LazyVim에서 프로젝트 lazygit 열기 |
+| `ll` | lsd로 숨김 파일을 포함한 상세 목록 |
 | `nvm use` / `sdk env` | 해당 프로젝트의 버전 선언을 명시적으로 적용 |
 
-Orca/Paseo에서 선택한 실제 저장소·worktree 경로를 Herdr에서도 사용한다. 앱이 만든 worktree는 해당 앱에서 관리한다. 새 GUI 프로세스가 이미 실행 중인 앱의 PATH를 갱신하지는 않으므로, CLI를 찾지 못하는 앱은 재시작하거나 Zsh 개발 셸에서 실행한다. Fish에서 nvm·SDKMAN을 직접 초기화하지 않았다.
+Orca/Paseo에서 선택한 실제 저장소·worktree 경로를 Herdr에서도 사용한다. 앱이 만든 worktree는 해당 앱에서 관리한다. 새 GUI 프로세스가 이미 실행 중인 앱의 PATH를 갱신하지는 않으므로, CLI를 찾지 못하는 앱은 재시작하거나 Fish에서 실행한다. nvm·SDKMAN은 Bash 환경 변경을 Fish로 전달하는 함수를 사용한다.
 
 새 Python 환경은 실제 pyenv 인터프리터를 지정한다.
 
 ```sh
-uv venv --python "$(pyenv which python)"
+uv venv --python (pyenv which python)
 # uv.lock이 있는 기존 프로젝트에서:
 uv sync --locked
 ```
@@ -89,7 +93,7 @@ uv sync --locked
 
 ```sh
 python3 local/apply-config.py
-brew bundle check --file=local/Brewfile
+brew bundle check --file=local/Brewfile --no-upgrade
 ```
 
 백업 위치는 `~/.local/state/wonder-envy/backups/`다. 각 시각별 `manifest.json`에 새로 만든 파일과 기존 파일 여부를 구분했다. 초기 적용은 `20260911-111256-853833`, 최종 Zsh 보완은 `20260911-111554-738462`에 기록되어 있다. AI 설정은 `ai-20260911-111325`에 별도로 보관했다. 인증 파일을 저장소로 복사하지 않았다.
@@ -104,7 +108,7 @@ CLI와 credential helper는 `~/.local/bin`, Compose·Buildx는 `~/.docker/cli-pl
 
 ## 검증 결과
 
-- `brew bundle check --file=local/Brewfile`: 통과.
+- `brew bundle check --file=local/Brewfile --no-upgrade`: 통과.
 - Zsh 구문 검사 및 실제 PTY 로그인 셸 초기화: 오류 없이 통과. tty가 없는 셸에서는 fzf 키 바인딩 초기화를 생략하도록 보완했다.
 - Fish 구문·대화형 초기화, `EDITOR=nvim`, `y` 함수·프롬프트 존재: 통과.
 - Ghostty `+validate-config`: 통과.

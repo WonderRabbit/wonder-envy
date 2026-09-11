@@ -47,3 +47,19 @@
 - [lsd](https://github.com/lsd-rs/lsd)
 - [Catppuccin Fish](https://github.com/catppuccin/fish)
 - [Catppuccin lsd](https://github.com/catppuccin/lsd)
+
+## 실제 적용과 계획 보완 (2026-09-11)
+
+- 계획을 `7598005`로 먼저 커밋·푸시한 뒤 설치했다. lsd 1.2.0을 추가했고 기존 런타임을 유지했다.
+- macOS 계정 셸 변경은 일반 권한으로 거부되어 OS 관리자 인증으로 완료했다. `/etc/shells`와 계정 UserShell을 확인했다.
+- Terminal 기본·시작 프로필은 `Catppuccin Mocha — Fish`, Ghostty·Herdr 기본 셸은 Fish로 적용했다. Terminal 프로필은 Nerd Font 13pt도 지정한다.
+- Bass 원본을 고정 revision·LICENSE와 보관하고 적용 함수에 system Python 사용·실패 임시 파일 정리를 추가했다. pyenv shim이 내부 Python 실행으로 PATH 뒤로 밀리는 실제 문제를 해결했다.
+- SDKMAN은 관리 명령마다 init이 기본 Java를 다시 선택하므로 Fish의 기존 JAVA_HOME·PATH를 보존한 뒤 요청 명령을 실행한다. `sdk use` 이후 `sdk current`를 실행해도 세션 선택이 유지됨을 확인했다.
+- Fish·Ghostty·Oh My Posh·Herdr·OpenCode는 내장 Catppuccin을 선택했다. 다른 포트는 원본과 LICENSE를 `local/vendor/`에 고정했다. OpenCode의 설정 위치는 현재 공식 안내에 따라 `tui.json`이다.
+- lnav 공식 Catppuccin 포트가 확인되지 않아 지원 schema에 Mocha 색상을 직접 지정했다. 단순 CLI는 ANSI 팔레트를 따르며 고정 RGB 출력까지 변경했다고 주장하지 않는다.
+- fzf 공식 예제의 universal export는 재적용 시 사용자 영속 변수를 누적 변경하지 않도록 global export로 조정했다.
+- TUI 검증 도구는 controlling PTY·대화형 Fish를 사용해야 했다. 자동화 환경의 NO_COLOR는 검증 프로세스에서만 해제했다. 실제 셸은 사용자 NO_COLOR를 존중한다.
+- Herdr 기본 서버가 실행 중이지 않아 reload 대상은 없었다. 디스크 설정은 다음 실행에 적용되며 사용자 세션을 강제로 시작/종료하지 않았다.
+- 작업 중 mise의 새 배포가 나타나 일반 Brewfile check는 업데이트를 요구했다. 설치 여부 확인은 `--no-upgrade`로 통과했고 mise 업그레이드는 이번 변경에 포함하지 않았다.
+
+검증: [Fish 런타임 결과](../../../local/checks/fish-results.json), [기존 CLI 통합 결과](../../../local/checks/latest-results.json). 현재 운영 안내는 [Fish·테마 매뉴얼](../../../menual/fish-and-themes.md)이다.

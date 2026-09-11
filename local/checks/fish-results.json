@@ -1,0 +1,32 @@
+{
+  "date": "2026-09-11",
+  "login_shell": "/opt/homebrew/bin/fish",
+  "lsd": "1.2.0",
+  "runtime_checks": [
+    "nvm use/exec and Node program",
+    "pyenv shell and Python program",
+    "sdk use/current preserves selection and Java program",
+    "uv venv activation/deactivation in Fish",
+    "npm version",
+    "pyenv shim priority",
+    "mise task paths",
+    "AI CLI paths and version commands"
+  ],
+  "theme_checks": {
+    "fish": "Mocha colors and Atuin/fzf bindings",
+    "ghostty": "validate-config passed",
+    "terminal": "default/startup profile, Fish command and Nerd Font preferences verified",
+    "lazyvim": "colors_name = catppuccin-mocha",
+    "yazi": "PTY exit 0, truecolor output",
+    "lazygit": "PTY exit 0, truecolor output",
+    "atuin": "PTY exit 0, truecolor output",
+    "lnav": "config theme load passed",
+    "herdr": "built-in Catppuccin configured; default server not running",
+    "opencode": "built-in Catppuccin selected in tui.json; no model session started"
+  },
+  "brewfile": "check --no-upgrade passed",
+  "remaining": [
+    "Existing GUI windows need reload/new window",
+    "Herdr actual pane visual check remains manual"
+  ]
+}

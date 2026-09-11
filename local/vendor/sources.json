@@ -1,0 +1,82 @@
+[
+  {
+    "name": "lsd",
+    "repository": "https://github.com/catppuccin/lsd",
+    "revision": "7085155432c7fe53a7acd7b0c004955368aa0fba",
+    "source": "themes/catppuccin-mocha/colors.yaml",
+    "file": "lsd-colors.yaml",
+    "revision_kind": "git tree"
+  },
+  {
+    "name": "yazi",
+    "repository": "https://github.com/catppuccin/yazi",
+    "revision": "d62802be39210ea10e54b3e3b09735c6cb9e57c1",
+    "source": "themes/mocha/catppuccin-mocha-mauve.toml",
+    "file": "yazi-theme.toml",
+    "revision_kind": "git tree"
+  },
+  {
+    "name": "fzf",
+    "repository": "https://github.com/catppuccin/fzf",
+    "revision": "7508f8141286fb95249100a2b5325960320dcf32",
+    "source": "themes/catppuccin-fzf-mocha.fish",
+    "file": "fzf-catppuccin.fish",
+    "revision_kind": "git tree"
+  },
+  {
+    "name": "atuin",
+    "repository": "https://github.com/catppuccin/atuin",
+    "revision": "68aa64b77573c235044b614e752a781701af4eec",
+    "source": "themes/mocha/catppuccin-mocha-mauve.toml",
+    "file": "atuin-mocha.toml",
+    "revision_kind": "git tree"
+  },
+  {
+    "name": "lazygit",
+    "repository": "https://github.com/catppuccin/lazygit",
+    "revision": "798ad2e75a11766e9ba50e76e59aea6a81eb4866",
+    "source": "themes-mergable/mocha/mauve.yml",
+    "file": "lazygit-mocha.yml",
+    "revision_kind": "git tree"
+  },
+  {
+    "name": "bat",
+    "repository": "https://github.com/catppuccin/bat",
+    "revision": "6810349b28055dce54076712fc05fc68da4b8ec0",
+    "source": "themes/Catppuccin Mocha.tmTheme",
+    "file": "catppuccin-mocha.tmTheme",
+    "revision_kind": "git tree"
+  },
+  {
+    "name": "Terminal",
+    "repository": "https://github.com/catppuccin/terminal.app",
+    "revision": "671f4e176c6223e66995a1d30d7ddd4e736721af",
+    "source": "themes/catppuccin-mocha.terminal",
+    "file": "catppuccin-mocha.terminal",
+    "revision_kind": "git tree"
+  },
+  {
+    "name": "bass",
+    "repository": "https://github.com/edc/bass",
+    "revision": "79b62958ecf4e87334f24d6743e5766475bcf4d0",
+    "source": "functions/bass.fish",
+    "file": "bass.fish",
+    "revision_kind": "git tree"
+  },
+  {
+    "name": "bass-python",
+    "repository": "https://github.com/edc/bass",
+    "revision": "79b62958ecf4e87334f24d6743e5766475bcf4d0",
+    "source": "functions/__bass.py",
+    "file": "__bass.py",
+    "revision_kind": "git tree"
+  },
+  {
+    "name": "eza",
+    "repository": "https://github.com/catppuccin/eza",
+    "revision": "70f805f6cc27fa5b91750b75afb4296a0ec7fec9",
+    "source": "themes/mocha/catppuccin-mocha-mauve.yml",
+    "file": "eza-theme.yml",
+    "revision_kind": "git tree"
+  }
+]

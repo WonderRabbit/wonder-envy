@@ -1,5 +1,7 @@
 # SDKMAN·nvm·pyenv·uv 기반 런타임 설치 계획
 
+> 2026-09-11 후속 적용: 기본 셸과 개발 환경은 Fish로 변경했다. 아래 과거 Zsh 운영 방침은 [계획 16](16-fish-catppuccin-lsd.md)이 대체한다. nvm·SDKMAN은 Bass로 연동하고 테마는 Catppuccin Mocha를 사용한다.
+
 ## 결정과 적용 범위
 
 2026-09-06 사용자 결정에 따라 Java는 SDKMAN, Node.js는 nvm으로 관리한다. 후속 요청의 `penv`는 사용자가 `pyenv`로 확인했다. Python 인터프리터 설치·전환은 pyenv, 프로젝트 가상환경·의존성·도구 관리는 uv로 역할을 나눈다. 새 Mac mini에서 최신 정식 버전을 우선 설치하며 기존 버전은 재현하지 않는다. 이 문서가 기존 이전 문서의 런타임 선택 안내보다 우선한다.

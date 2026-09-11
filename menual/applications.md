@@ -4,7 +4,7 @@
 
 | 앱 / 버전 | 기본 사용 방법 | 공식 링크 |
 | --- | --- | --- |
-| Ghostty 1.3.1 | `open -a Ghostty`; Fish 터미널 시작, `dev`로 개발 Zsh 진입 | [문서](https://ghostty.org/docs) |
+| Ghostty 1.3.1 | `open -a Ghostty`; Fish에서 Node·Python·Java 사용, Catppuccin Mocha | [문서](https://ghostty.org/docs) |
 | Aside 1.0.910.1 | `open -a Aside`; 브라우저에서 필요한 계정 로그인 | [공식 사이트](https://aside.com/) |
 | Visual Studio Code 1.137.0 | `code .`으로 현재 프로젝트 열기, Python은 프로젝트 `.venv` 선택 | [문서](https://code.visualstudio.com/docs) |
 | Docker Desktop 4.90.0 | `open -a Docker`; 최초 설정을 완료한 뒤 컨테이너 사용 | [Mac 설치](https://docs.docker.com/desktop/setup/install/mac-install/) |
