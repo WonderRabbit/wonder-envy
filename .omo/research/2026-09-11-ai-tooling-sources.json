@@ -1,0 +1,117 @@
+{
+  "checked_on": "2026-09-11",
+  "release_dates_timezone": "UTC",
+  "method": "Public GitHub repositories and releases/latest endpoints; official READMEs and documentation; no tool installation or model calls",
+  "repositories": [
+    {
+      "repository": "tobi/qmd",
+      "url": "https://github.com/tobi/qmd",
+      "archived": false,
+      "pushed_at": "2026-09-09T20:51:56Z",
+      "release": "v2.8.3",
+      "release_date": "2026-08-16T22:30:34Z",
+      "release_url": "https://github.com/tobi/qmd/releases/tag/v2.8.3",
+      "license": "MIT",
+      "description": "mini cli search engine for your docs, knowledge bases, meeting notes, whatever. Tracking current sota approaches while being all local"
+    },
+    {
+      "repository": "yamadashy/repomix",
+      "url": "https://github.com/yamadashy/repomix",
+      "archived": false,
+      "pushed_at": "2026-09-10T15:14:45Z",
+      "release": "v1.18.0",
+      "release_date": "2026-08-08T04:31:26Z",
+      "release_url": "https://github.com/yamadashy/repomix/releases/tag/v1.18.0",
+      "license": "MIT",
+      "description": "📦 Repomix is a powerful tool that packs your entire repository into a single, AI-friendly file. Perfect for when you need to feed your codebase to Large Language Models (LLMs) or other AI tools like Claude, ChatGPT, DeepSeek, Perplexity, Gemini, Gemma, Llama, Grok, and more."
+    },
+    {
+      "repository": "oraios/serena",
+      "url": "https://github.com/oraios/serena",
+      "archived": false,
+      "pushed_at": "2026-09-08T11:26:10Z",
+      "release": "v1.7.0",
+      "release_date": "2026-08-09T18:38:06Z",
+      "release_url": "https://github.com/oraios/serena/releases/tag/v1.7.0",
+      "license": "MIT",
+      "description": "A powerful MCP toolkit for coding, providing semantic retrieval and editing capabilities  - the IDE for your agent"
+    },
+    {
+      "repository": "folke/sidekick.nvim",
+      "url": "https://github.com/folke/sidekick.nvim",
+      "archived": false,
+      "pushed_at": "2026-09-08T14:07:25Z",
+      "release": "v2.3.0",
+      "release_date": "2026-03-20T10:10:41Z",
+      "release_url": "https://github.com/folke/sidekick.nvim/releases/tag/v2.3.0",
+      "license": "Apache-2.0",
+      "description": "Your Neovim AI sidekick"
+    },
+    {
+      "repository": "simonw/llm",
+      "url": "https://github.com/simonw/llm",
+      "archived": false,
+      "pushed_at": "2026-09-08T18:35:28Z",
+      "release": "0.35",
+      "release_date": "2026-09-07T23:54:54Z",
+      "release_url": "https://github.com/simonw/llm/releases/tag/0.35",
+      "license": "Apache-2.0",
+      "description": "Access large language models from the command-line"
+    },
+    {
+      "repository": "promptfoo/promptfoo",
+      "url": "https://github.com/promptfoo/promptfoo",
+      "archived": false,
+      "pushed_at": "2026-09-11T09:15:52Z",
+      "release": "0.123.0",
+      "release_date": "2026-09-10T02:34:32Z",
+      "release_url": "https://github.com/promptfoo/promptfoo/releases/tag/0.123.0",
+      "license": "MIT",
+      "description": "Test your prompts, agents, and RAGs. Red teaming/pentesting/vulnerability scanning for AI. Compare performance of GPT, Claude, Gemini, DeepSeek, and more. Simple declarative configs with command line and CI/CD integration.  Used by OpenAI and Anthropic."
+    },
+    {
+      "repository": "ollama/ollama",
+      "url": "https://github.com/ollama/ollama",
+      "archived": false,
+      "pushed_at": "2026-09-11T06:09:40Z",
+      "release": "v0.34.0",
+      "release_date": "2026-09-05T23:49:00Z",
+      "release_url": "https://github.com/ollama/ollama/releases/tag/v0.34.0",
+      "license": "MIT",
+      "description": "Get up and running with Kimi-K2.6, GLM-5.2, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models."
+    },
+    {
+      "repository": "openclaw/mcporter",
+      "url": "https://github.com/openclaw/mcporter",
+      "archived": false,
+      "pushed_at": "2026-09-05T21:50:55Z",
+      "release": "v0.13.10",
+      "release_date": "2026-09-05T21:12:27Z",
+      "release_url": "https://github.com/openclaw/mcporter/releases/tag/v0.13.10",
+      "license": "MIT",
+      "description": "Call MCPs via TypeScript, masquerading as simple TypeScript API. Or package them as cli."
+    },
+    {
+      "repository": "vercel-labs/agent-browser",
+      "url": "https://github.com/vercel-labs/agent-browser",
+      "archived": false,
+      "pushed_at": "2026-09-10T21:51:22Z",
+      "release": "v0.37.1",
+      "release_date": "2026-09-08T16:05:56Z",
+      "release_url": "https://github.com/vercel-labs/agent-browser/releases/tag/v0.37.1",
+      "license": "Apache-2.0",
+      "description": "Browser automation CLI for AI agents"
+    },
+    {
+      "repository": "github/spec-kit",
+      "url": "https://github.com/github/spec-kit",
+      "archived": false,
+      "pushed_at": "2026-09-10T21:56:41Z",
+      "release": "v1.0.6",
+      "release_date": "2026-09-10T13:27:05Z",
+      "release_url": "https://github.com/github/spec-kit/releases/tag/v1.0.6",
+      "license": "MIT",
+      "description": "💫 Toolkit to help you get started with Spec-Driven Development"
+    }
+  ]
+}
