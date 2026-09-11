@@ -5,6 +5,7 @@
 - [Fish 기본 셸·Catppuccin·lsd](fish-and-themes.md)
 - [일상 개발 흐름과 추가 6종](workflow.md)
 - [LazyVim 상세 사용법](lazyvim.md)
+- [Obsidian 프로젝트·카테고리 운영 매뉴얼](obsidian.md)
 - [런타임·Python 도구·AI CLI](runtimes-and-ai.md)
 - [GUI 앱·폰트](applications.md)
 - [LazyVim 플러그인·Mason·OMO 보조 도구](plugins-and-helpers.md)

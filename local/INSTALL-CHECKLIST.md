@@ -52,6 +52,33 @@
 
 커밋·푸시는 Git 이력과 원격 branch를 기준으로 확인한다. 이 문서에는 자기 자신의 commit hash를 중복 기록하지 않는다.
 
+## 17. 옵시디언 도구 관리
+
+계획: [Obsidian 설치·Volt 구성](../.omo/plans/mac-mini-migration/17-obsidian-volt.md). 사용법: [프로젝트·카테고리 운영 매뉴얼](../menual/obsidian.md). 2026-09-11 기준. 준비된 설정 파일과 앱 런타임 검증을 구분한다. 공유 가능한 확인 요약은 [Obsidian 결과](checks/obsidian-results.json)에 기록한다.
+
+- [x] Obsidian 1.13.7 설치. `/Applications/Obsidian.app/Contents/Info.plist`와 `brew list --cask --versions obsidian` 일치.
+- [x] `local/Brewfile`에 `cask "obsidian"` 추가.
+- [x] 신규 `~/Volt`에 9개 상위 폴더와 `.obsidian` 설정 준비.
+- [x] 기본 노트·첨부 위치, 링크 자동 갱신, Templates·Daily notes·코어 플러그인 설정 파일 작성.
+- [x] Home·분류 사전·OBS 프로젝트·샘플 작업·4종 템플릿·Work.base 3개 뷰 작성.
+- [x] 설치·설정 계획과 Jira식 카테고리·속성·상태·일일/주간 운영 매뉴얼 작성.
+- [x] Tasks·QuickAdd·Templater·Omnisearch·Dataview·Excalidraw·Git 추천 순서와 Kanban 보류 근거 기록.
+- [x] JSON·Bases YAML·템플릿 날짜 치환 후 frontmatter 구문·고유 ID·필수 폴더 확인.
+- [x] `~/Volt`를 앱 설정에 등록하고 Home을 열어 북마크한 뒤, 앱 재시작 뒤에도 Home이 활성 파일로 유지되는 것을 확인.
+- [x] `OBS-001 보관함 검증`의 `doing`·`blocked` 변경이 Work.base의 Doing·Blocked 결과에 반영되고, `todo`·`false` 복원 후 두 결과가 비는 것을 확인.
+- [x] 기본 Task 템플릿으로 날짜·제목이 치환된 노트를 만들고, 첨부가 `99-Attachments`에 저장되며, Obsidian 내 이름 변경 뒤 링크가 갱신되는 것을 확인.
+- [x] 보관함과 `.obsidian`을 포함한 사전 설치 스냅샷을 별도 임시 폴더에 복원해 파일·경로를 확인. 같은 디스크 스냅샷이므로 독립 백업은 아직 설정하지 않았다.
+- [x] Tasks 8.4.0과 QuickAdd 2.25.0 설치·활성화. Tasks global filter는 `#task`; QuickAdd는 Inbox task capture와 New task note 두 명령으로 최소 구성.
+- [x] QuickAdd가 Inbox에 `#task` 항목을 추가하고 Tasks가 이를 조회하며, QuickAdd 템플릿 명령이 `00-Inbox`에 새 Task 노트를 생성하는 것을 확인.
+- [x] 속성 자료형·기본 설정·Home 북마크를 앱 런타임에서 확인하고, 재시작 뒤 Tasks·QuickAdd·`#task` filter·QuickAdd 명령이 유지되는 것을 확인. 최종 `OBS-001 보관함 검증`은 `done`·`blocked: false`다.
+- [ ] 실제 프로젝트 등록, 1주 운영 후 카테고리·WIP·플러그인 재검토.
+- [ ] 여러 기기가 필요할 경우 동기화 수단 선택 및 충돌·복원 확인.
+
+| 플러그인 | 설치 버전 | 목적·설정 | 검증일·결과 |
+| --- | --- | --- | --- |
+| Tasks | 8.4.0 | `#task` global filter, 프로젝트 체크박스 조회 | 2026-09-11: 공식 release 자산 hash·활성화·runtime query·재시작 유지 확인 |
+| QuickAdd | 2.25.0 | Inbox task capture, New task note | 2026-09-11: 공식 release 자산 hash·capture·Task 템플릿 생성·재시작 유지 확인 |
+| Templater·Omnisearch·Dataview·Excalidraw·Git | — | 필요해질 때 도입; 기준은 매뉴얼 참조 | 미도입 |
 
 ## 16. Fish·Catppuccin·lsd 후속 작업
 

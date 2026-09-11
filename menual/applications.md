@@ -4,6 +4,7 @@
 
 | 앱 / 버전 | 기본 사용 방법 | 공식 링크 |
 | --- | --- | --- |
+| Obsidian 1.13.7 | `open -a Obsidian`; 등록된 `~/Volt`의 Home을 연다. Command palette에서 QuickAdd의 Inbox task capture 또는 New task note 실행. [운영 매뉴얼](obsidian.md) | [다운로드](https://obsidian.md/download) |
 | Ghostty 1.3.1 | `open -a Ghostty`; Fish에서 Node·Python·Java 사용, Catppuccin Mocha | [문서](https://ghostty.org/docs) |
 | Aside 1.0.910.1 | `open -a Aside`; 브라우저에서 필요한 계정 로그인 | [공식 사이트](https://aside.com/) |
 | Visual Studio Code 1.137.0 | `code .`으로 현재 프로젝트 열기, Python은 프로젝트 `.venv` 선택 | [문서](https://code.visualstudio.com/docs) |

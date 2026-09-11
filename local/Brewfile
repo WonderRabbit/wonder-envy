@@ -49,3 +49,4 @@ cask "visual-studio-code"
 # Docker.app is installed from the official DMG, with user-local CLI links.
 # The cask's /usr/local postflight requires administrator access on this Mac.
 cask "antigravity-cli"
+cask "obsidian"

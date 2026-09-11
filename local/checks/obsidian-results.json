@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-09-11T14:11:00+09:00",
+  "result": "pass",
+  "scope": "Redacted Obsidian installation and Volt runtime verification summary.",
+  "app": {
+    "name": "Obsidian",
+    "version": "1.13.7"
+  },
+  "plugins": [
+    {
+      "name": "Tasks",
+      "version": "8.4.0",
+      "enabled": true,
+      "configuration": "global filter: #task"
+    },
+    {
+      "name": "QuickAdd",
+      "version": "2.25.0",
+      "enabled": true,
+      "configuration": "Inbox task capture (one value input) and New task note commands"
+    }
+  ],
+  "backup": {
+    "restoreVerified": true,
+    "storageClassification": "same-disk recovery snapshot",
+    "independentBackup": false
+  },
+  "rawEvidenceStorage": {
+    "path": ".omo/evidence/obsidian-app-20260911",
+    "versionControlled": false,
+    "note": "This committed summary is shareable. Raw runtime logs and the screenshot remain local only."
+  },
+  "successCriteria": [
+    {
+      "scenario": "Register the Volt vault, open bookmarked Home, and preserve the active Home file after restart.",
+      "invocation": "obsidian vault=Volt open path='90-System/Home.md'; restart Obsidian; query active file",
+      "binaryObservable": "Home opened and the active path was 90-System/Home.md after restart.",
+      "capturedArtifactPath": ".omo/evidence/obsidian-app-20260911/restart-persistence.txt"
+    },
+    {
+      "scenario": "Create a note from the core Task template and query the Doing and Blocked Bases views after changing the sample task.",
+      "invocation": "obsidian vault=Volt create ... template=Task; property:set; base:query",
+      "binaryObservable": "The template created a dated, titled note; each changed state returned the sample once, and restored todo/false returned empty views.",
+      "capturedArtifactPath": ".omo/evidence/obsidian-app-20260911/core-template.txt; .omo/evidence/obsidian-app-20260911/bases-filtering.txt"
+    },
+    {
+      "scenario": "Route an attachment and rename a linked note through the app runtime.",
+      "invocation": "obsidian vault=Volt quickadd:save-clipboard-image; obsidian vault=Volt move",
+      "binaryObservable": "The attachment path was under 99-Attachments and the referring link changed to the renamed target.",
+      "capturedArtifactPath": ".omo/evidence/obsidian-app-20260911/attachment-routing.txt; .omo/evidence/obsidian-app-20260911/link-rename.txt"
+    },
+    {
+      "scenario": "Run both initial community-plugin workflows and verify their settings survive restart.",
+      "invocation": "obsidian vault=Volt quickadd:run choice='Inbox task capture' verify; obsidian vault=Volt quickadd:run choice='New task note' verify; restart Obsidian",
+      "binaryObservable": "Both commands returned ok:true, verified:true, effect:created; Tasks listed the #task item; Tasks 8.4.0, QuickAdd 2.25.0, the #task filter, and both choices remained enabled after restart.",
+      "capturedArtifactPath": ".omo/evidence/obsidian-app-20260911/plugins-runtime-final.txt; .omo/evidence/obsidian-app-20260911/restart-persistence.txt"
+    },
+    {
+      "scenario": "Restore the pre-install vault snapshot to a separate temporary directory.",
+      "invocation": "ditto -x <snapshot> <temporary-restore-dir>; compare paths and file SHA-256 values",
+      "binaryObservable": "Restore and all recorded comparisons passed; the hidden .obsidian directory was present.",
+      "capturedArtifactPath": ".omo/evidence/obsidian-backup-20260911T135733+0900.json"
+    },
+    {
+      "scenario": "Remove runtime test notes and attachments after verification.",
+      "invocation": "Obsidian runtime delete followed by vault test-resource scan",
+      "binaryObservable": "The scan reported no current test resources remaining in the vault.",
+      "capturedArtifactPath": ".omo/evidence/obsidian-app-20260911/cleanup-final.txt"
+    }
+  ],
+  "limitations": [
+    "The verified snapshot is on the same disk and is not an independent backup.",
+    "Computer Use accessibility calls did not return an AX snapshot; official Obsidian CLI runtime and an app screenshot verified the app state."
+  ],
+  "futureWork": [
+    "Review actual project use, categories, WIP, and optional plugins after one week.",
+    "Choose and test one sync method only if another device requires access."
+  ]
+}
