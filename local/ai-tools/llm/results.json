@@ -1,0 +1,15 @@
+{
+  "tool": "llm",
+  "version": "0.35",
+  "installer": "uv tool with pyenv CPython 3.14.7",
+  "executable": "~/.local/bin/llm",
+  "logging": "off",
+  "offline_fixture": {
+    "provider": "temporary llm-echo 0.3a3",
+    "input": "fixture-input-llm-offline",
+    "result": "validated echo JSON and removed the plugin",
+    "real_model_inference": false
+  },
+  "failure_case": "removed echo model exits nonzero with Unknown model",
+  "not_verified": ["provider credentials", "paid API calls", "local model runtime"]
+}
