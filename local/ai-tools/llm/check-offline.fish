@@ -17,7 +17,13 @@ if test -n "$existing_echo"
     exit 2
 end
 
-set -g llm_fixture_dir (mktemp -d -t llm-offline)
+set -l fixture_dir (mktemp -d -t llm-offline)
+if test $status -ne 0; or test -z "$fixture_dir"; or not test -d "$fixture_dir"
+    echo 'Could not create the temporary LLM fixture directory.' >&2
+    exit 1
+end
+
+set -g llm_fixture_dir "$fixture_dir"
 set -g llm_fixture_plugin_added false
 
 function cleanup_llm_fixture --on-event fish_exit
