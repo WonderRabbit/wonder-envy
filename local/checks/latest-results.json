@@ -1,0 +1,10 @@
+{
+  "date": "2026-09-11",
+  "checks": {
+    "worktrunk": "Zsh/Fish switch; independent files/status; branch-preserving cleanup passed",
+    "mise": "Task preserves nvm/pyenv/SDKMAN paths",
+    "hurl": "Loopback 200 success and deliberate 404 assertion failure passed; server stopped",
+    "lnav": "Access-log recognition and SQL row count passed",
+    "difftastic": "JavaScript one-off external diff and unchanged default Git diff passed"
+  }
+}

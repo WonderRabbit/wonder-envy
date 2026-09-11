@@ -1,5 +1,10 @@
 # Mac mini 개발 환경 이전 안내
 
+- [현재 설치 체크리스트](local/INSTALL-CHECKLIST.md)
+- [설치 도구 전체 사용 매뉴얼·공식 링크](menual/README.md)
+
+**2026-09-11 로컬 설정 적용:** 현재 Mac에 공통 개발 도구·런타임·셸 설정과 주요 AI CLI를 설치했다. 실제 설치 버전, 검증 결과, 로그인 및 원본 자료가 필요한 잔여 항목은 [로컬 설정 결과](local/README.md)에 기록했다. 아래와 `.omo`의 조사 당시 상태는 과거 기록으로 보존한다.
+
 현재 Mac을 읽기 전용으로 조사한 **최신 버전 우선 이전 계획**이다. 작성일은 2026-09-06이다. 실제 설치·설정 변경·테스트·OMO QA는 수행하지 않았다.
 
 처음에는 [전체 계획](.omo/plans/mac-mini-migration.md)과 [단계별 이전 순서](.omo/plans/mac-mini-migration/07-transfer-order.md)를 읽으면 된다.
@@ -25,6 +30,8 @@
 | 런타임 관리자 설치 | [SDKMAN·nvm·pyenv·uv 설치와 프로젝트별 버전 제어](.omo/plans/mac-mini-migration/11-runtime-managers.md) |
 | 추가 셸·에이전트 도구 | [Fish·Oh My Posh·Herdr·Aside·Paseo 상세 설치](.omo/plans/mac-mini-migration/12-fish-posh-herdr-aside-paseo.md) |
 | 통합 개발 작업 구성 | [Orca/Paseo + Herdr + Yazi·Neovim·lazygit](.omo/plans/mac-mini-migration/13-workflow-orca-paseo-herdr.md) |
+| LazyVim·CLI 추가 계획 | [기존 설치를 재사용하는 LazyVim 도입·검색·문서 도구 연동](.omo/plans/mac-mini-migration/14-lazyvim-cli-integration.md) |
+| 공유 리서치 기반 추가 계획 | [Worktrunk·Atuin·mise·Hurl·lnav·difftastic](.omo/plans/mac-mini-migration/15-worktrunk-workflow-tools.md) |
 
 ## 읽을 때 알아둘 점
 

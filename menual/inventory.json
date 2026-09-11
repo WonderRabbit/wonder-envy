@@ -1,0 +1,1205 @@
+[
+  {
+    "name": "ast-grep",
+    "versions": "0.45.3",
+    "category": "명시적 설치 도구",
+    "commands": [
+      "ast-grep",
+      "sg"
+    ],
+    "homepage": "https://ast-grep.github.io/"
+  },
+  {
+    "name": "atuin",
+    "versions": "18.22.0",
+    "category": "명시적 설치 도구",
+    "commands": [
+      "atuin"
+    ],
+    "homepage": "https://atuin.sh/"
+  },
+  {
+    "name": "autoconf",
+    "versions": "2.73",
+    "category": "의존성으로 설치",
+    "commands": [
+      "autoconf",
+      "autoheader",
+      "autom4te",
+      "autoreconf",
+      "autoscan",
+      "autoupdate",
+      "ifnames"
+    ],
+    "homepage": "https://www.gnu.org/software/autoconf/"
+  },
+  {
+    "name": "bash",
+    "versions": "5.3.15",
+    "category": "명시적 설치 도구",
+    "commands": [
+      "bash",
+      "bashbug"
+    ],
+    "homepage": "https://www.gnu.org/software/bash/"
+  },
+  {
+    "name": "ca-certificates",
+    "versions": "2026-08-13",
+    "category": "의존성으로 설치",
+    "commands": [],
+    "homepage": "https://curl.se/docs/caextract.html"
+  },
+  {
+    "name": "cairo",
+    "versions": "1.18.4",
+    "category": "의존성으로 설치",
+    "commands": [
+      "cairo-trace"
+    ],
+    "homepage": "https://cairographics.org/"
+  },
+  {
+    "name": "difftastic",
+    "versions": "0.70.0",
+    "category": "명시적 설치 도구",
+    "commands": [
+      "difft"
+    ],
+    "homepage": "https://difftastic.wilfred.me.uk/"
+  },
+  {
+    "name": "eza",
+    "versions": "0.23.5",
+    "category": "명시적 설치 도구",
+    "commands": [
+      "eza"
+    ],
+    "homepage": "https://eza.rocks"
+  },
+  {
+    "name": "fd",
+    "versions": "10.5.0",
+    "category": "명시적 설치 도구",
+    "commands": [
+      "fd"
+    ],
+    "homepage": "https://github.com/sharkdp/fd"
+  },
+  {
+    "name": "fish",
+    "versions": "4.9.3",
+    "category": "명시적 설치 도구",
+    "commands": [
+      "fish",
+      "fish_indent",
+      "fish_key_reader"
+    ],
+    "homepage": "https://fishshell.com"
+  },
+  {
+    "name": "fontconfig",
+    "versions": "2.18.3",
+    "category": "의존성으로 설치",
+    "commands": [
+      "fc-cache",
+      "fc-cat",
+      "fc-conflist",
+      "fc-genconf",
+      "fc-list",
+      "fc-match",
+      "fc-pattern",
+      "fc-query",
+      "fc-scan",
+      "fc-validate"
+    ],
+    "homepage": "https://wiki.freedesktop.org/www/Software/fontconfig/"
+  },
+  {
+    "name": "freetype",
+    "versions": "2.14.3",
+    "category": "의존성으로 설치",
+    "commands": [
+      "freetype-config"
+    ],
+    "homepage": "https://www.freetype.org/"
+  },
+  {
+    "name": "fzf",
+    "versions": "0.74.3",
+    "category": "명시적 설치 도구",
+    "commands": [
+      "fzf",
+      "fzf-preview.sh",
+      "fzf-tmux"
+    ],
+    "homepage": "https://junegunn.github.io/fzf/"
+  },
+  {
+    "name": "gettext",
+    "versions": "1.0",
+    "category": "의존성으로 설치",
+    "commands": [
+      "autopoint",
+      "envsubst",
+      "gettext",
+      "gettext.sh",
+      "gettextize",
+      "msgattrib",
+      "msgcat",
+      "msgcmp",
+      "msgcomm",
+      "msgconv",
+      "msgen",
+      "msgexec",
+      "msgfilter",
+      "msgfmt",
+      "msggrep",
+      "msginit",
+      "msgmerge",
+      "msgpre",
+      "msgunfmt",
+      "msguniq",
+      "ngettext",
+      "po-fetch",
+      "printf_gettext",
+      "printf_ngettext",
+      "recode-sr-latin",
+      "spit",
+      "xgettext"
+    ],
+    "homepage": "https://www.gnu.org/software/gettext/"
+  },
+  {
+    "name": "gh",
+    "versions": "2.98.0, 2.100.0",
+    "category": "명시적 설치 도구",
+    "commands": [
+      "gh"
+    ],
+    "homepage": "https://cli.github.com/"
+  },
+  {
+    "name": "giflib",
+    "versions": "6.1.3",
+    "category": "의존성으로 설치",
+    "commands": [
+      "gifbuild",
+      "gifclrmp",
+      "giffix",
+      "giftext",
+      "giftool"
+    ],
+    "homepage": "https://giflib.sourceforge.net/"
+  },
+  {
+    "name": "git",
+    "versions": "2.55.0",
+    "category": "명시적 설치 도구",
+    "commands": [
+      "git",
+      "git-cvsserver",
+      "git-receive-pack",
+      "git-shell",
+      "git-upload-archive",
+      "git-upload-pack",
+      "scalar"
+    ],
+    "homepage": "https://git-scm.com"
+  },
+  {
+    "name": "glib",
+    "versions": "2.88.3",
+    "category": "의존성으로 설치",
+    "commands": [
+      "gdbus",
+      "gdbus-codegen",
+      "gi-compile-repository",
+      "gi-decompile-typelib",
+      "gi-inspect-typelib",
+      "gio",
+      "gio-querymodules",
+      "glib-compile-resources",
+      "glib-compile-schemas",
+      "glib-genmarshal",
+      "glib-gettextize",
+      "glib-mkenums",
+      "gobject-query",
+      "gresource",
+      "gsettings",
+      "gtester",
+      "gtester-report"
+    ],
+    "homepage": "https://docs.gtk.org/glib/"
+  },
+  {
+    "name": "gmp",
+    "versions": "6.3.0",
+    "category": "의존성으로 설치",
+    "commands": [],
+    "homepage": "https://gmplib.org/"
+  },
+  {
+    "name": "gnupg",
+    "versions": "2.5.22",
+    "category": "의존성으로 설치",
+    "commands": [
+      "addgnupghome",
+      "applygnupgdefaults",
+      "dirmngr",
+      "dirmngr-client",
+      "gpg",
+      "gpg-agent",
+      "gpg-authcode-sign.sh",
+      "gpg-card",
+      "gpg-connect-agent",
+      "gpg-mail-tube",
+      "gpg-wks-client",
+      "gpg-wks-server",
+      "gpgconf",
+      "gpgparsemail",
+      "gpgscm",
+      "gpgsm",
+      "gpgsplit",
+      "gpgtar",
+      "gpgv",
+      "kbxutil",
+      "watchgnupg"
+    ],
+    "homepage": "https://gnupg.org/"
+  },
+  {
+    "name": "gnutls",
+    "versions": "3.8.13_2",
+    "category": "의존성으로 설치",
+    "commands": [
+      "gnutls-certtool",
+      "gnutls-cli",
+      "gnutls-cli-debug",
+      "gnutls-serv",
+      "ocsptool",
+      "p11tool",
+      "psktool"
+    ],
+    "homepage": "https://gnutls.org/"
+  },
+  {
+    "name": "go",
+    "versions": "1.27.1",
+    "category": "의존성으로 설치",
+    "commands": [
+      "go",
+      "gofmt"
+    ],
+    "homepage": "https://go.dev/"
+  },
+  {
+    "name": "gpgme",
+    "versions": "2.2.0",
+    "category": "의존성으로 설치",
+    "commands": [
+      "gnupg-key-manage",
+      "gpgme-config",
+      "gpgme-json",
+      "gpgme-tool"
+    ],
+    "homepage": "https://www.gnupg.org/related_software/gpgme/"
+  },
+  {
+    "name": "gpgmepp",
+    "versions": "2.2.0",
+    "category": "의존성으로 설치",
+    "commands": [],
+    "homepage": "https://www.gnupg.org/related_software/gpgme/"
+  },
+  {
+    "name": "graphite2",
+    "versions": "1.3.15",
+    "category": "의존성으로 설치",
+    "commands": [
+      "gr2fonttest"
+    ],
+    "homepage": "https://graphite.sil.org/"
+  },
+  {
+    "name": "harfbuzz",
+    "versions": "14.4.0",
+    "category": "의존성으로 설치",
+    "commands": [
+      "hb-info",
+      "hb-raster",
+      "hb-shape",
+      "hb-subset",
+      "hb-vector",
+      "hb-view"
+    ],
+    "homepage": "https://github.com/harfbuzz/harfbuzz"
+  },
+  {
+    "name": "herdr",
+    "versions": "0.9.0",
+    "category": "명시적 설치 도구",
+    "commands": [
+      "herdr"
+    ],
+    "homepage": "https://herdr.dev"
+  },
+  {
+    "name": "hurl",
+    "versions": "8.0.1",
+    "category": "명시적 설치 도구",
+    "commands": [
+      "hurl",
+      "hurlfmt"
+    ],
+    "homepage": "https://hurl.dev"
+  },
+  {
+    "name": "icu4c@78",
+    "versions": "78.3",
+    "category": "의존성으로 설치",
+    "commands": [
+      "derb",
+      "escapesrc",
+      "genbrk",
+      "genccode",
+      "gencfu",
+      "gencmn",
+      "gencnval",
+      "gendict",
+      "gennorm2",
+      "genrb",
+      "gensprep",
+      "icu-config",
+      "icuexportdata",
+      "icuinfo",
+      "icupkg",
+      "makeconv",
+      "pkgdata",
+      "uconv"
+    ],
+    "homepage": "https://icu.unicode.org/home"
+  },
+  {
+    "name": "jpeg-turbo",
+    "versions": "3.2.0",
+    "category": "의존성으로 설치",
+    "commands": [
+      "cjpeg",
+      "djpeg",
+      "jpegtran",
+      "rdjpgcom",
+      "tjbench",
+      "wrjpgcom"
+    ],
+    "homepage": "https://www.libjpeg-turbo.org/"
+  },
+  {
+    "name": "jq",
+    "versions": "1.8.2",
+    "category": "명시적 설치 도구",
+    "commands": [
+      "jq"
+    ],
+    "homepage": "https://jqlang.github.io/jq/"
+  },
+  {
+    "name": "json-c",
+    "versions": "0.19",
+    "category": "의존성으로 설치",
+    "commands": [],
+    "homepage": "https://github.com/json-c/json-c/wiki"
+  },
+  {
+    "name": "lazygit",
+    "versions": "0.65.0",
+    "category": "명시적 설치 도구",
+    "commands": [
+      "lazygit"
+    ],
+    "homepage": "https://github.com/jesseduffield/lazygit/"
+  },
+  {
+    "name": "libarchive",
+    "versions": "3.8.9",
+    "category": "의존성으로 설치",
+    "commands": [
+      "bsdcat",
+      "bsdcpio",
+      "bsdtar",
+      "bsdunzip",
+      "cpio",
+      "tar"
+    ],
+    "homepage": "https://www.libarchive.org"
+  },
+  {
+    "name": "libassuan",
+    "versions": "3.0.2",
+    "category": "의존성으로 설치",
+    "commands": [
+      "libassuan-config"
+    ],
+    "homepage": "https://www.gnupg.org/related_software/libassuan/"
+  },
+  {
+    "name": "libb2",
+    "versions": "0.98.1",
+    "category": "명시적 설치 도구",
+    "commands": [],
+    "homepage": "https://blake2.net/"
+  },
+  {
+    "name": "libgcrypt",
+    "versions": "1.12.3",
+    "category": "의존성으로 설치",
+    "commands": [
+      "dumpsexp",
+      "hmac256",
+      "libgcrypt-config",
+      "mpicalc"
+    ],
+    "homepage": "https://gnupg.org/related_software/libgcrypt/"
+  },
+  {
+    "name": "libgit2",
+    "versions": "1.9.7",
+    "category": "의존성으로 설치",
+    "commands": [
+      "git2"
+    ],
+    "homepage": "https://libgit2.org/"
+  },
+  {
+    "name": "libgpg-error",
+    "versions": "1.61",
+    "category": "의존성으로 설치",
+    "commands": [
+      "gpg-error",
+      "gpg-error-config",
+      "gpgrt-config",
+      "yat2m"
+    ],
+    "homepage": "https://www.gnupg.org/related_software/libgpg-error/"
+  },
+  {
+    "name": "libidn2",
+    "versions": "2.3.8",
+    "category": "의존성으로 설치",
+    "commands": [
+      "idn2"
+    ],
+    "homepage": "https://www.gnu.org/software/libidn/#libidn2"
+  },
+  {
+    "name": "libksba",
+    "versions": "1.8.1",
+    "category": "의존성으로 설치",
+    "commands": [
+      "ksba-config"
+    ],
+    "homepage": "https://www.gnupg.org/related_software/libksba/"
+  },
+  {
+    "name": "libpng",
+    "versions": "1.6.58",
+    "category": "의존성으로 설치",
+    "commands": [
+      "libpng-config",
+      "libpng16-config",
+      "png-fix-itxt",
+      "pngfix"
+    ],
+    "homepage": "https://www.libpng.org/pub/png/libpng.html"
+  },
+  {
+    "name": "libssh2",
+    "versions": "1.11.1_4",
+    "category": "의존성으로 설치",
+    "commands": [],
+    "homepage": "https://libssh2.org/"
+  },
+  {
+    "name": "libtasn1",
+    "versions": "4.21.0",
+    "category": "의존성으로 설치",
+    "commands": [
+      "asn1Coding",
+      "asn1Decoding",
+      "asn1Parser"
+    ],
+    "homepage": "https://www.gnu.org/software/libtasn1/"
+  },
+  {
+    "name": "libtiff",
+    "versions": "4.7.2",
+    "category": "의존성으로 설치",
+    "commands": [
+      "fax2ps",
+      "fax2tiff",
+      "pal2rgb",
+      "ppm2tiff",
+      "raw2tiff",
+      "tiff2bw",
+      "tiff2pdf",
+      "tiff2ps",
+      "tiff2rgba",
+      "tiffcmp",
+      "tiffcp",
+      "tiffcrop",
+      "tiffdither",
+      "tiffdump",
+      "tiffinfo",
+      "tiffmedian",
+      "tiffset",
+      "tiffsplit"
+    ],
+    "homepage": "https://libtiff.gitlab.io/libtiff/"
+  },
+  {
+    "name": "libunistring",
+    "versions": "1.4.2",
+    "category": "의존성으로 설치",
+    "commands": [],
+    "homepage": "https://www.gnu.org/software/libunistring/"
+  },
+  {
+    "name": "libusb",
+    "versions": "1.0.30",
+    "category": "의존성으로 설치",
+    "commands": [],
+    "homepage": "https://libusb.info/"
+  },
+  {
+    "name": "libuv",
+    "versions": "1.52.1",
+    "category": "의존성으로 설치",
+    "commands": [],
+    "homepage": "https://libuv.org/"
+  },
+  {
+    "name": "libx11",
+    "versions": "1.8.13",
+    "category": "의존성으로 설치",
+    "commands": [],
+    "homepage": "https://www.x.org/"
+  },
+  {
+    "name": "libxau",
+    "versions": "1.0.12",
+    "category": "의존성으로 설치",
+    "commands": [],
+    "homepage": "https://www.x.org/"
+  },
+  {
+    "name": "libxcb",
+    "versions": "1.17.0",
+    "category": "의존성으로 설치",
+    "commands": [],
+    "homepage": "https://www.x.org/"
+  },
+  {
+    "name": "libxdmcp",
+    "versions": "1.1.5",
+    "category": "의존성으로 설치",
+    "commands": [],
+    "homepage": "https://www.x.org/"
+  },
+  {
+    "name": "libxext",
+    "versions": "1.3.7",
+    "category": "의존성으로 설치",
+    "commands": [],
+    "homepage": "https://www.x.org/"
+  },
+  {
+    "name": "libxrender",
+    "versions": "0.9.12",
+    "category": "의존성으로 설치",
+    "commands": [],
+    "homepage": "https://www.x.org/"
+  },
+  {
+    "name": "little-cms2",
+    "versions": "2.19.1",
+    "category": "의존성으로 설치",
+    "commands": [
+      "jpgicc",
+      "linkicc",
+      "psicc",
+      "tificc",
+      "transicc"
+    ],
+    "homepage": "https://www.littlecms.com/"
+  },
+  {
+    "name": "llhttp",
+    "versions": "9.4.3",
+    "category": "의존성으로 설치",
+    "commands": [],
+    "homepage": "https://llhttp.org/"
+  },
+  {
+    "name": "lnav",
+    "versions": "0.14.1",
+    "category": "명시적 설치 도구",
+    "commands": [
+      "lnav"
+    ],
+    "homepage": "https://lnav.org/"
+  },
+  {
+    "name": "lpeg",
+    "versions": "1.1.0_2",
+    "category": "의존성으로 설치",
+    "commands": [],
+    "homepage": "https://www.inf.puc-rio.br/~roberto/lpeg/"
+  },
+  {
+    "name": "luajit",
+    "versions": "2.1.1788856981",
+    "category": "의존성으로 설치",
+    "commands": [
+      "luajit",
+      "luajit-2.1.1788856981"
+    ],
+    "homepage": "https://luajit.org/luajit.html"
+  },
+  {
+    "name": "luv",
+    "versions": "1.52.1-0",
+    "category": "의존성으로 설치",
+    "commands": [],
+    "homepage": "https://github.com/luvit/luv"
+  },
+  {
+    "name": "lz4",
+    "versions": "1.10.0",
+    "category": "의존성으로 설치",
+    "commands": [
+      "lz4",
+      "lz4c",
+      "lz4cat",
+      "unlz4"
+    ],
+    "homepage": "https://lz4.github.io/lz4/"
+  },
+  {
+    "name": "lzo",
+    "versions": "2.10",
+    "category": "의존성으로 설치",
+    "commands": [],
+    "homepage": "https://www.oberhumer.com/opensource/lzo/"
+  },
+  {
+    "name": "m4",
+    "versions": "1.4.21",
+    "category": "의존성으로 설치",
+    "commands": [
+      "m4"
+    ],
+    "homepage": "https://www.gnu.org/software/m4/"
+  },
+  {
+    "name": "mdq",
+    "versions": "0.10.0",
+    "category": "명시적 설치 도구",
+    "commands": [
+      "mdq"
+    ],
+    "homepage": "https://github.com/yshavit/mdq"
+  },
+  {
+    "name": "mise",
+    "versions": "2026.9.4",
+    "category": "명시적 설치 도구",
+    "commands": [
+      "mise"
+    ],
+    "homepage": "https://mise.jdx.dev/"
+  },
+  {
+    "name": "ncurses",
+    "versions": "6.6",
+    "category": "의존성으로 설치",
+    "commands": [
+      "captoinfo",
+      "clear",
+      "infocmp",
+      "infotocap",
+      "ncurses6-config",
+      "ncursesw6-config",
+      "reset",
+      "tabs",
+      "tic",
+      "toe",
+      "tput",
+      "tset"
+    ],
+    "homepage": "https://invisible-island.net/ncurses/announce.html"
+  },
+  {
+    "name": "neovim",
+    "versions": "0.12.5_1",
+    "category": "명시적 설치 도구",
+    "commands": [
+      "nvim"
+    ],
+    "homepage": "https://neovim.io/"
+  },
+  {
+    "name": "nettle",
+    "versions": "4.0",
+    "category": "의존성으로 설치",
+    "commands": [
+      "nettle-hash",
+      "nettle-lfib-stream",
+      "nettle-pbkdf2",
+      "pkcs1-conv",
+      "sexp-conv"
+    ],
+    "homepage": "https://www.lysator.liu.se/~nisse/nettle/"
+  },
+  {
+    "name": "npth",
+    "versions": "1.8",
+    "category": "의존성으로 설치",
+    "commands": [],
+    "homepage": "https://gnupg.org/"
+  },
+  {
+    "name": "nspr",
+    "versions": "4.40",
+    "category": "의존성으로 설치",
+    "commands": [
+      "nspr-config"
+    ],
+    "homepage": "https://hg.mozilla.org/projects/nspr"
+  },
+  {
+    "name": "nss",
+    "versions": "3.129",
+    "category": "의존성으로 설치",
+    "commands": [
+      "addbuiltin",
+      "atob",
+      "baddbdir",
+      "bltest",
+      "btoa",
+      "certutil",
+      "chktest",
+      "cmsutil",
+      "crlutil",
+      "dbtest",
+      "dbtool",
+      "derdump",
+      "dertimetest",
+      "digest",
+      "ecperf",
+      "encodeinttest",
+      "fbectest",
+      "fipstest",
+      "httpserv",
+      "listsuites",
+      "makepqg",
+      "mangle",
+      "modutil",
+      "multinit",
+      "nonspr10",
+      "nss-config",
+      "nss-policy-check",
+      "nssdefaults",
+      "ocspclnt",
+      "ocspresp",
+      "oidcalc",
+      "p7content",
+      "p7env",
+      "p7sign",
+      "p7verify",
+      "pk11ectest",
+      "pk11gcmtest",
+      "pk11importtest",
+      "pk11mode",
+      "pk12util",
+      "pk1sign",
+      "pkix-errcodes",
+      "pp",
+      "pwdecrypt",
+      "remtest",
+      "rsaperf",
+      "rsapoptst",
+      "sdbthreadtst",
+      "sdrtest",
+      "secmodtest",
+      "selfserv",
+      "shlibsign",
+      "signtool",
+      "signver",
+      "ssltap",
+      "strsclnt",
+      "symkeyutil",
+      "tstclnt",
+      "validation",
+      "vfychain",
+      "vfyserv"
+    ],
+    "homepage": "https://firefox-source-docs.mozilla.org/security/nss/index.html"
+  },
+  {
+    "name": "oh-my-posh",
+    "versions": "31.2.1",
+    "category": "명시적 설치 도구",
+    "commands": [
+      "oh-my-posh"
+    ],
+    "homepage": "https://ohmyposh.dev"
+  },
+  {
+    "name": "oniguruma",
+    "versions": "6.9.10",
+    "category": "의존성으로 설치",
+    "commands": [
+      "onig-config"
+    ],
+    "homepage": "https://github.com/kkos/oniguruma/"
+  },
+  {
+    "name": "openjpeg",
+    "versions": "2.5.4",
+    "category": "의존성으로 설치",
+    "commands": [
+      "opj_compress",
+      "opj_decompress",
+      "opj_dump"
+    ],
+    "homepage": "https://www.openjpeg.org/"
+  },
+  {
+    "name": "openssl@3",
+    "versions": "3.6.4",
+    "category": "명시적 설치 도구",
+    "commands": [
+      "c_rehash",
+      "openssl"
+    ],
+    "homepage": "https://openssl-library.org"
+  },
+  {
+    "name": "p11-kit",
+    "versions": "0.26.5",
+    "category": "의존성으로 설치",
+    "commands": [
+      "p11-kit",
+      "trust"
+    ],
+    "homepage": "https://p11-glue.github.io/p11-glue/p11-kit.html"
+  },
+  {
+    "name": "pcre2",
+    "versions": "10.47_1, 10.48",
+    "category": "의존성으로 설치",
+    "commands": [
+      "pcre2-config",
+      "pcre2grep",
+      "pcre2test"
+    ],
+    "homepage": "https://www.pcre.org/"
+  },
+  {
+    "name": "pinentry",
+    "versions": "1.3.3",
+    "category": "의존성으로 설치",
+    "commands": [
+      "pinentry",
+      "pinentry-curses",
+      "pinentry-tty"
+    ],
+    "homepage": "https://www.gnupg.org/related_software/pinentry/"
+  },
+  {
+    "name": "pixman",
+    "versions": "0.46.4",
+    "category": "의존성으로 설치",
+    "commands": [],
+    "homepage": "https://cairographics.org/"
+  },
+  {
+    "name": "pkgconf",
+    "versions": "3.0.7",
+    "category": "의존성으로 설치",
+    "commands": [
+      "bomtool",
+      "pccritic",
+      "pkg-config",
+      "pkgconf",
+      "spdxtool"
+    ],
+    "homepage": "https://github.com/pkgconf/pkgconf"
+  },
+  {
+    "name": "poppler",
+    "versions": "26.09.0",
+    "category": "명시적 설치 도구",
+    "commands": [
+      "pdfattach",
+      "pdfdetach",
+      "pdffonts",
+      "pdfimages",
+      "pdfinfo",
+      "pdfseparate",
+      "pdfsig",
+      "pdftocairo",
+      "pdftohtml",
+      "pdftoppm",
+      "pdftops",
+      "pdftotext",
+      "pdfunite"
+    ],
+    "homepage": "https://poppler.freedesktop.org/"
+  },
+  {
+    "name": "pyenv",
+    "versions": "2.8.5",
+    "category": "명시적 설치 도구",
+    "commands": [
+      "pyenv",
+      "pyenv-install",
+      "pyenv-uninstall",
+      "python-build"
+    ],
+    "homepage": "https://github.com/pyenv/pyenv"
+  },
+  {
+    "name": "readline",
+    "versions": "8.3.3",
+    "category": "의존성으로 설치",
+    "commands": [],
+    "homepage": "https://tiswww.case.edu/php/chet/readline/rltop.html"
+  },
+  {
+    "name": "resvg",
+    "versions": "0.48.1",
+    "category": "명시적 설치 도구",
+    "commands": [
+      "resvg",
+      "usvg"
+    ],
+    "homepage": "https://github.com/linebender/resvg"
+  },
+  {
+    "name": "ripgrep",
+    "versions": "15.2.0",
+    "category": "명시적 설치 도구",
+    "commands": [
+      "rg"
+    ],
+    "homepage": "https://github.com/BurntSushi/ripgrep"
+  },
+  {
+    "name": "sevenzip",
+    "versions": "26.03",
+    "category": "명시적 설치 도구",
+    "commands": [
+      "7zz"
+    ],
+    "homepage": "https://7-zip.org"
+  },
+  {
+    "name": "sqlite",
+    "versions": "3.53.4",
+    "category": "명시적 설치 도구",
+    "commands": [
+      "sqlite3"
+    ],
+    "homepage": "https://sqlite.org/index.html"
+  },
+  {
+    "name": "stow",
+    "versions": "2.4.1",
+    "category": "명시적 설치 도구",
+    "commands": [
+      "chkstow",
+      "stow"
+    ],
+    "homepage": "https://www.gnu.org/software/stow/"
+  },
+  {
+    "name": "tcl-tk@8",
+    "versions": "8.6.18",
+    "category": "명시적 설치 도구",
+    "commands": [
+      "critcl",
+      "dtplite",
+      "mkdoc",
+      "nns",
+      "nnsd",
+      "nnslog",
+      "page",
+      "pt",
+      "tcldocstrip",
+      "tclsh",
+      "tclsh8.6",
+      "wish",
+      "wish8.6"
+    ],
+    "homepage": "https://www.tcl-lang.org"
+  },
+  {
+    "name": "tree",
+    "versions": "2.3.2",
+    "category": "명시적 설치 도구",
+    "commands": [
+      "tree"
+    ],
+    "homepage": "https://oldmanprogrammer.net/source.php?dir=projects/tree"
+  },
+  {
+    "name": "tree-sitter",
+    "versions": "0.27.0",
+    "category": "의존성으로 설치",
+    "commands": [],
+    "homepage": "https://tree-sitter.github.io/"
+  },
+  {
+    "name": "tree-sitter-cli",
+    "versions": "0.27.0",
+    "category": "명시적 설치 도구",
+    "commands": [
+      "tree-sitter"
+    ],
+    "homepage": "https://tree-sitter.github.io"
+  },
+  {
+    "name": "unibilium",
+    "versions": "2.1.4",
+    "category": "의존성으로 설치",
+    "commands": [],
+    "homepage": "https://github.com/neovim/unibilium"
+  },
+  {
+    "name": "utf8proc",
+    "versions": "2.11.3",
+    "category": "의존성으로 설치",
+    "commands": [],
+    "homepage": "https://juliastrings.github.io/utf8proc/"
+  },
+  {
+    "name": "webp",
+    "versions": "1.6.0",
+    "category": "의존성으로 설치",
+    "commands": [
+      "cwebp",
+      "dwebp",
+      "gif2webp",
+      "img2webp",
+      "vwebp",
+      "webpinfo",
+      "webpmux"
+    ],
+    "homepage": "https://developers.google.com/speed/webp/"
+  },
+  {
+    "name": "worktrunk",
+    "versions": "0.77.0",
+    "category": "명시적 설치 도구",
+    "commands": [
+      "wt"
+    ],
+    "homepage": "https://worktrunk.dev"
+  },
+  {
+    "name": "xorgproto",
+    "versions": "2025.1",
+    "category": "의존성으로 설치",
+    "commands": [],
+    "homepage": "https://www.x.org/"
+  },
+  {
+    "name": "xz",
+    "versions": "5.8.3",
+    "category": "명시적 설치 도구",
+    "commands": [
+      "lzcat",
+      "lzcmp",
+      "lzdiff",
+      "lzegrep",
+      "lzfgrep",
+      "lzgrep",
+      "lzless",
+      "lzma",
+      "lzmadec",
+      "lzmainfo",
+      "lzmore",
+      "unlzma",
+      "unxz",
+      "xz",
+      "xzcat",
+      "xzcmp",
+      "xzdec",
+      "xzdiff",
+      "xzegrep",
+      "xzfgrep",
+      "xzgrep",
+      "xzless",
+      "xzmore"
+    ],
+    "homepage": "https://tukaani.org/xz/"
+  },
+  {
+    "name": "yazi",
+    "versions": "26.9.1",
+    "category": "명시적 설치 도구",
+    "commands": [
+      "ya",
+      "yazi"
+    ],
+    "homepage": "https://yazi-rs.github.io"
+  },
+  {
+    "name": "yq",
+    "versions": "4.53.6",
+    "category": "명시적 설치 도구",
+    "commands": [
+      "yq"
+    ],
+    "homepage": "https://github.com/mikefarah/yq"
+  },
+  {
+    "name": "zlib",
+    "versions": "1.3.2",
+    "category": "명시적 설치 도구",
+    "commands": [],
+    "homepage": "https://zlib.net/"
+  },
+  {
+    "name": "zoxide",
+    "versions": "0.10.0",
+    "category": "명시적 설치 도구",
+    "commands": [
+      "zoxide"
+    ],
+    "homepage": "https://github.com/ajeetdsouza/zoxide"
+  },
+  {
+    "name": "zsh-syntax-highlighting",
+    "versions": "0.8.0",
+    "category": "명시적 설치 도구",
+    "commands": [],
+    "homepage": "https://github.com/zsh-users/zsh-syntax-highlighting"
+  },
+  {
+    "name": "zstd",
+    "versions": "1.5.7_1",
+    "category": "명시적 설치 도구",
+    "commands": [
+      "pzstd",
+      "unzstd",
+      "zstd",
+      "zstdcat",
+      "zstdgrep",
+      "zstdless",
+      "zstdmt"
+    ],
+    "homepage": "https://facebook.github.io/zstd/"
+  }
+]

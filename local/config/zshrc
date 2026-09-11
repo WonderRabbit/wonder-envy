@@ -1,0 +1,42 @@
+# Managed local development profile. Login shell remains macOS Zsh.
+typeset -U path PATH
+path=("$HOME/.local/bin" /opt/homebrew/bin /opt/homebrew/sbin $path)
+export EDITOR=nvim
+export VISUAL=nvim
+export PYENV_ROOT="$HOME/.pyenv"
+if command -v pyenv >/dev/null 2>&1; then
+  eval "$(pyenv init - zsh)"
+fi
+export NVM_DIR="$HOME/.nvm"
+[[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
+
+autoload -Uz compinit
+compinit
+[[ -o zle ]] && bindkey -e
+alias lg=lazygit
+alias vim=nvim
+alias ll='eza -lah --git'
+alias dev='zsh -il'
+function y() {
+  local tmp cwd result
+  tmp="$(mktemp -t yazi-cwd.XXXXXX)" || return
+  yazi "$@" --cwd-file="$tmp"
+  result=$?
+  cwd="$(cat -- "$tmp")"
+  [[ -n "$cwd" && "$cwd" != "$PWD" ]] && builtin cd -- "$cwd"
+  rm -f -- "$tmp"
+  return $result
+}
+command -v zoxide >/dev/null 2>&1 && eval "$(zoxide init zsh)"
+command -v wt >/dev/null 2>&1 && eval "$(wt config shell init zsh)"
+if [[ -o zle && -t 0 ]]; then
+  command -v fzf >/dev/null 2>&1 && source <(fzf --zsh)
+  command -v atuin >/dev/null 2>&1 && eval "$(atuin init zsh --disable-up-arrow --disable-ai)"
+  [[ -r /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+
+# SDKMAN initialization stays last, as required by its installer.
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
+# macOS path_helper can move an inherited JDK path behind /usr/bin in nested login shells.
+[[ -n "$JAVA_HOME" && -d "$JAVA_HOME/bin" ]] && path=("$JAVA_HOME/bin" $path)

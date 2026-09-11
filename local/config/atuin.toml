@@ -1,0 +1,4 @@
+# Local history only. Keep the selected command editable before execution.
+auto_sync = false
+update_check = false
+enter_accept = false

@@ -63,6 +63,8 @@
 
 Node는 사용자 결정에 따라 nvm으로 관리한다. [공식 문서 기반 설치·전환 계획](11-runtime-managers.md)을 따른다. 최신 정식 배포를 기본으로 두고 프로젝트가 요구하면 지원 LTS를 추가한다. fnm·mise·n은 기본 설치 대상이 아니다. `/usr/local/n/versions/node/20.14.0`은 기존 설치 기록으로만 남긴다.
 
+2026-09-11 추가: [15 워크플로 도구 계획](15-worktrunk-workflow-tools.md)에서 mise를 프로젝트 작업 실행 용도로 설치하는 예외를 추가했다. 위의 런타임 관리자 대체 제외 정책과 nvm 기본값은 유지한다.
+
 ## Android SDK
 
 ### 현재 근거

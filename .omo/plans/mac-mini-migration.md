@@ -25,6 +25,12 @@ Homebrew Formula 203종, Caskroom 13개, 주요 전역 실행 디렉터리 942�
 | [11 런타임 관리자 설치](mac-mini-migration/11-runtime-managers.md) | SDKMAN·nvm·pyenv·uv 공식 설치·프로젝트별 전환·업데이트·MCP 연결 |
 | [12 추가 도구 설치](mac-mini-migration/12-fish-posh-herdr-aside-paseo.md) | Fish·Oh My Posh·Herdr·Aside 앱/CLI·Paseo 데스크톱/headless |
 | [13 통합 개발 작업 구성](mac-mini-migration/13-workflow-orca-paseo-herdr.md) | Orca/Paseo + Herdr와 Yazi·Neovim·lazygit의 역할·실제 작업 경로·사용 순서 |
+| [14 LazyVim·CLI 추가 계획](mac-mini-migration/14-lazyvim-cli-integration.md) | 2026-09-11 추가: 기존 설치 재사용, LazyVim 전환·검색·구조화 문서 도구 연결 |
+| [15 워크플로 도구 추가 계획](mac-mini-migration/15-worktrunk-workflow-tools.md) | 공유 리서치 기반 Worktrunk·Atuin·mise·Hurl·lnav·difftastic; 기존 관리자·worktree 역할 유지 |
+
+2026-09-11 후속 계획은 14 문서를 따른다. 기존 CLI 설치 항목을 중복 추가하지 않으며, Neovim 구성은 기존 사용자 플러그인 전체 복원 대신 LazyVim 전환 경로를 선택한다. 아래의 조사 당시 상태·체크박스는 과거 기록으로 보존하고 실제 설치 상태는 `local/README.md`를 참조한다.
+
+공유 CLI 리서치에 따른 추가 도입은 15 문서를 따른다. mise는 작업 실행 용도로 우선 도입하고, Worktrunk는 직접 관리하는 worktree에 사용한다. 11의 런타임 관리자와 13의 앱별 worktree 관리 원칙은 유지한다.
 
 07의 순서로 읽고, 각 단계에서 01~06·10의 도구별 절차와 02를 참조한다. 설치 채널·지원 상태가 충돌하면 최신 공식 조회를 기록한 09와 각 도구 공식 문서를 우선한다.
 
