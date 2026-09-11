@@ -1,0 +1,77 @@
+{
+  "plugins": [
+    {
+      "name": "Kanban",
+      "id": "obsidian-kanban",
+      "version": "2.0.51",
+      "minAppVersion": "1.0.0",
+      "release": "https://github.com/community-archive/obsidian-kanban/releases/tag/2.0.51",
+      "assets": {
+        "main.js": {
+          "sha256": "a7e3bd4cf25f9b7f53a841c44ce990db0ef5f7954ebcab17ae6dca80310c39ac",
+          "publisherDigestAvailable": false
+        },
+        "manifest.json": {
+          "sha256": "24976787097ead467969e014a35654e7a80e4db49a977689a48afadfa15e1854",
+          "publisherDigestAvailable": false
+        },
+        "styles.css": {
+          "sha256": "ecf6dd31f1727c441cce6f54794b0d3916dcfffc87fa17b855c79ba04a85d9a7",
+          "publisherDigestAvailable": false
+        }
+      }
+    },
+    {
+      "name": "Tasks Kanban",
+      "id": "tasks-kanban",
+      "version": "0.10.3",
+      "minAppVersion": "1.12.7",
+      "release": "https://github.com/Djiit/obsidian-tasks-kanban/releases/tag/0.10.3",
+      "assets": {
+        "main.js": {
+          "sha256": "6c1ec83dd9cc276b2485c9d9e532a84e7d4200178cd0156ba0dd80435bb1e99b",
+          "publisherDigestAvailable": true
+        },
+        "manifest.json": {
+          "sha256": "58c7f77b4989ae79ff1a68f217ffee29b8f800d4c18491be64bb6d4bc27f36fb",
+          "publisherDigestAvailable": true
+        },
+        "styles.css": {
+          "sha256": "1f2c6b8a6bf1bee3abca798b1747d6134acd910bcdd1ee3bd79338b5cd7c1295",
+          "publisherDigestAvailable": true
+        }
+      }
+    },
+    {
+      "name": "Excalidraw",
+      "id": "obsidian-excalidraw-plugin",
+      "version": "2.27.3",
+      "minAppVersion": "1.8.7",
+      "release": "https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/2.27.3",
+      "assets": {
+        "main.js": {
+          "sha256": "8275e85d0f6314654a3d5ad86125d2e1b0018b4ffd60eddab2bbc8eefa0e13c1",
+          "publisherDigestAvailable": true
+        },
+        "manifest.json": {
+          "sha256": "30bfc399dae79f7ca1ce050bb2a9497aada72ef576be831375571f5444f428a2",
+          "publisherDigestAvailable": true
+        },
+        "styles.css": {
+          "sha256": "4a9b329e24abdc310ccd8a0fb91c7863619ceea2a0d266981a86d6c5ebd1abea",
+          "publisherDigestAvailable": true
+        }
+      }
+    }
+  ],
+  "verifiedOn": "2026-09-11",
+  "checks": {
+    "unitAndPath": "18 passed; 1 opt-in skipped",
+    "live": "5 passed",
+    "typecheck": "0 errors, 0 warnings",
+    "openCodeSkillDiscovered": true,
+    "claudeModelConversationTested": false,
+    "gui": "Kanban view, Tasks Kanban card and Excalidraw editor opened",
+    "invalidId": "JSON error, exit 1; no board mutation"
+  }
+}

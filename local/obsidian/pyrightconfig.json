@@ -1,0 +1,5 @@
+{
+  "typeCheckingMode": "all",
+  "pythonVersion": "3.13",
+  "include": ["voltkanban", "volt_kanban.py"]
+}

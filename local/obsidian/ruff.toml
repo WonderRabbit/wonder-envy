@@ -1,0 +1,6 @@
+# Check correctness, typing and common security mistakes; pytest uses assertions.
+[lint]
+select = ["E4", "E7", "E9", "F", "I", "UP", "B", "ANN", "S"]
+[lint.per-file-ignores]
+"tests/*.py" = ["S101", "S108"]
+"voltkanban/app_client.py" = ["S603"] # Explicit argv; no shell. Input is JSON data.

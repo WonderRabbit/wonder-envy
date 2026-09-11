@@ -62,7 +62,7 @@
 - [x] 기본 노트·첨부 위치, 링크 자동 갱신, Templates·Daily notes·코어 플러그인 설정 파일 작성.
 - [x] Home·분류 사전·OBS 프로젝트·샘플 작업·4종 템플릿·Work.base 3개 뷰 작성.
 - [x] 설치·설정 계획과 Jira식 카테고리·속성·상태·일일/주간 운영 매뉴얼 작성.
-- [x] Tasks·QuickAdd·Templater·Omnisearch·Dataview·Excalidraw·Git 추천 순서와 Kanban 보류 근거 기록.
+- [x] Tasks·QuickAdd·Templater·Omnisearch·Dataview·Excalidraw·Git 추천 순서와 Kanban 유지보수 유의사항 기록. 후속 설치는 아래 참조.
 - [x] JSON·Bases YAML·템플릿 날짜 치환 후 frontmatter 구문·고유 ID·필수 폴더 확인.
 - [x] `~/Volt`를 앱 설정에 등록하고 Home을 열어 북마크한 뒤, 앱 재시작 뒤에도 Home이 활성 파일로 유지되는 것을 확인.
 - [x] `OBS-001 보관함 검증`의 `doing`·`blocked` 변경이 Work.base의 Doing·Blocked 결과에 반영되고, `todo`·`false` 복원 후 두 결과가 비는 것을 확인.
@@ -78,7 +78,7 @@
 | --- | --- | --- | --- |
 | Tasks | 8.4.0 | `#task` global filter, 프로젝트 체크박스 조회 | 2026-09-11: 공식 release 자산 hash·활성화·runtime query·재시작 유지 확인 |
 | QuickAdd | 2.25.0 | Inbox task capture, New task note | 2026-09-11: 공식 release 자산 hash·capture·Task 템플릿 생성·재시작 유지 확인 |
-| Templater·Omnisearch·Dataview·Excalidraw·Git | — | 필요해질 때 도입; 기준은 매뉴얼 참조 | 미도입 |
+| Templater·Omnisearch·Dataview·Git | — | 필요해질 때 도입; 기준은 매뉴얼 참조 | 미도입 |
 
 ## 16. Fish·Catppuccin·lsd 후속 작업
 
@@ -104,3 +104,14 @@
 - `brew bundle check --no-upgrade` 통과. 일반 check는 새 mise 배포 업데이트를 요구하므로 설치 검증과 구분한다.
 - Herdr 기본 서버는 실행 중이 아니어서 재시작하지 않았다. 다음 실행부터 새 설정 적용; 기존 UI 수동 확인 항목은 유지.
 - 설정·Terminal 프로필 재적용 변경 없음. [Fish 검증 결과](checks/fish-results.json), [운영 문서](../menual/fish-and-themes.md).
+
+## 18. 옵시디언 Kanban 도구 관리
+
+- [x] Kanban 2.0.51·Tasks Kanban 0.10.3·Excalidraw 2.27.3 설치·활성화.
+- [x] Tasks에 backlog B·review R 상태 추가, 6열 보드 구성.
+- [x] 기본 OBS Kanban 보드 및 CLI 생성·조회·수정·이동·완료·동기화 구현.
+- [x] OpenCode·Claude Code 공용 skill과 각각의 `/kanban` command 설치.
+- [x] OpenCode skill 검색, 경로 검사 포함 기본 테스트 18개 통과, 별도 실앱 검사 5개 통과. 기본 테스트의 실앱 항목 1개는 opt-in으로 skip.
+- [x] 잘못된 ID 오류 처리 수정, 독립 실행에서 한글·셸 문법 보존과 review→done 확인.
+- [x] [사용 매뉴얼](../menual/obsidian-kanban.md)과 [설치 기록](checks/obsidian-kanban-results.json) 추가.
+- [ ] Claude Code·OpenCode의 새 모델 대화에서 사용자 프로젝트 작업으로 `/kanban` 활용.

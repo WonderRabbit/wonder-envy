@@ -129,11 +129,11 @@ tags:
 
 초기 뷰는 `All work`, `Doing`, `Blocked`다. 초기 목록은 작업 파일만 포함한다. 마감일 관리가 필요해지면 `due` 열과 오름차순 정렬을 추가한다. 프로젝트 홈에는 목표·완료 조건·컴포넌트 사전·결정 링크를 유지한다. 분류와 상태의 원본은 각 노트의 속성이다.
 
-Kanban의 카드 이동과 이슈 노트 `status`가 자동으로 동기화된다고 가정하지 않는다. 향후 보드를 도입하면 카드 이동 후 속성 반영·재시작 후 유지까지 확인해야 한다.
+Kanban의 카드 이동과 이슈 노트 `status`가 자동으로 동기화된다고 가정하지 않는다. 현재 설치된 보드와 CLI의 상태 조정 방법은 [Kanban 운영 매뉴얼](obsidian-kanban.md)을 따른다.
 
 ## 7. 설치·추천 플러그인
 
-2026-09-11에 Tasks 8.4.0과 QuickAdd 2.25.0을 초기 플러그인으로 설치·활성화했다. 나머지는 추천 목록이며 설치 완료 목록이 아니다. 플러그인별 실제 상태·버전·검증 결과는 [체크리스트](../local/INSTALL-CHECKLIST.md)를 기준으로 한다.
+2026-09-11에 Tasks 8.4.0과 QuickAdd 2.25.0을 초기 플러그인으로 설치·활성화했다. 추가 요청으로 Kanban 2.0.51·Tasks Kanban 0.10.3·Excalidraw 2.27.3도 설치했다. 나머지는 추천 목록이다. 플러그인별 실제 상태·버전·검증 결과는 [체크리스트](../local/INSTALL-CHECKLIST.md)를 기준으로 한다.
 
 | 상태·순서 | 플러그인 | 도입 이유·설정 기준 | 공식 출처 |
 | --- | --- | --- | --- |
@@ -142,9 +142,9 @@ Kanban의 카드 이동과 이슈 노트 `status`가 자동으로 동기화된�
 | 선택 2 | Templater | 프로젝트 선택·날짜 등 동적 템플릿. 기본 Templates로 부족할 때 도입; 동일 생성 경로에 두 엔진을 중복 적용하지 않음 | [문서](https://silentvoid13.github.io/Templater/) |
 | 선택 2 | Omnisearch | 노트가 많아지면 본문 검색 개선. PDF·이미지 검색은 별도 인덱싱 요구사항 확인 | [저장소](https://github.com/scambier/obsidian-omnisearch) |
 | 선택 3 | Dataview | Bases로 표현하기 어려운 읽기용 집계. 우선 DQL만 사용하고 JavaScript 쿼리는 필요할 때 검토 | [저장소](https://github.com/blacksmithgu/obsidian-dataview) |
-| 선택 3 | Excalidraw | 설계 스케치·시각적 지식 연결. 일반 관계도는 기본 Canvas부터 사용 | [저장소](https://github.com/zsviczian/obsidian-excalidraw-plugin) |
+| 설치됨 | Excalidraw 2.27.3 | 설계 스케치·시각적 지식 연결. 일반 관계도는 기본 Canvas부터 사용 | [저장소](https://github.com/zsviczian/obsidian-excalidraw-plugin) |
 | 조건부 | Git | Markdown 변경 이력과 복구 보조. 저장소·인증·충돌 처리 확인 후 도입 | [저장소](https://github.com/Vinzent03/obsidian-git) |
-| 보류 | Kanban | 시각적 보드에는 유용하나 현재 저장소에 새 유지관리자 모집 안내가 있음. 핵심 운영 의존성으로 채택하기 전에 유지보수 상태 재확인 | [현재 저장소](https://github.com/community-archive/obsidian-kanban) |
+| 설치됨 | Kanban 2.0.51 | 시각적 보드에는 유용하나 현재 저장소에 새 유지관리자 모집 안내가 있음. 업데이트 전 유지보수 상태 재확인 | [현재 저장소](https://github.com/community-archive/obsidian-kanban) |
 
 Tasks는 체크박스 단위 도구이고, 이 매뉴얼의 이슈는 노트 단위다. 이슈 상태는 YAML, 세부 단계 완료는 체크박스가 각각 담당한다. Tasks를 설치한 후 사용할 조회 예:
 
@@ -180,3 +180,5 @@ diff -qr "$HOME/Volt" "$restore_root/Volt"
 멀티디바이스가 필요해지면 Obsidian Sync 또는 다른 동기화 방식 하나를 선택한다. 같은 보관함에 여러 동기화 엔진을 겹쳐 적용하지 않는다. Git을 도입하면 원격 공개 여부와 첨부 용량을 검토하고, 초기에는 수동 commit으로 충돌 처리를 익힌다. API 키는 노트에 기록하지 않는다.
 
 팀 권한·감사 이력·자동 워크플로가 필요하면 Jira를 유지하고 Obsidian을 개인 지식·설계 기록 공간으로 연결한다. 파일 수가 커지면 플러그인 수·첨부·조회 범위를 먼저 점검하고, 접근 권한이나 동기화 경계가 달라질 때 보관함 분리를 검토한다.
+
+추가 도구: Tasks Kanban 0.10.3의 6상태 보드와 OpenCode·Claude Code `/kanban` 설정은 [Kanban·CLI 운영](obsidian-kanban.md)을 참조한다.

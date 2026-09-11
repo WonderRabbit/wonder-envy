@@ -79,3 +79,12 @@ Volt 등록, Home 북마크, 속성 자료형, 템플릿 생성, Bases의 Doing/
 설치 전 `.obsidian`을 포함한 `ditto` 스냅샷을 만들고 별도 임시 경로에 복원·비교했다. 독립 검토에서 아카이브 해시와 복원을 재확인했다. 같은 디스크에 보관한 복구 사본으로, 외부 저장소 백업은 아직 구성하지 않았다.
 
 1주 운영 후 분류·WIP 검토와 필요 시 다기기 동기화는 후속 운영이다. 현재 설치·검증 요약은 [결과 기록](../../../local/checks/obsidian-results.json), 사용 흐름은 [매뉴얼](../../../menual/obsidian.md)에서 확인한다.
+
+## 후속 요청: Kanban·Excalidraw·CLI (2026-09-11)
+
+- [x] Kanban·Tasks Kanban·Excalidraw 설치, 기존 Tasks와 6상태 구성.
+- [x] OBS 프로젝트 보드와 티켓 CLI 구현; 공유 skill 및 양쪽 `/kanban` 명령 배치.
+- [x] 생성·조회·이동·완료·동시 수정 거부·잘못된 ID 검증.
+- [x] 설치 기록·체크리스트·[Kanban 매뉴얼](../../../menual/obsidian-kanban.md) 작성.
+
+GUI 열과 Tasks 체크박스는 명시적 sync로 맞춘다. 연결된 이슈 노트 YAML은 자동 변경하지 않는다. Claude Code의 모델 대화 검증은 파일 배치 검증과 구분하여 후속 체크리스트에 남긴다.

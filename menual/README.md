@@ -123,3 +123,5 @@
 | [zoxide](homebrew/zoxide.md) | 0.10.0 | 명시적 설치 도구 |
 | [zsh-syntax-highlighting](homebrew/zsh-syntax-highlighting.md) | 0.8.0 | 명시적 설치 도구 |
 | [zstd](homebrew/zstd.md) | 1.5.7_1 | 명시적 설치 도구 |
+
+- [Obsidian Kanban·CLI 운영](obsidian-kanban.md) — OpenCode·Claude Code skill과 command
