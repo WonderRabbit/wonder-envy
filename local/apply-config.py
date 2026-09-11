@@ -34,6 +34,7 @@ mapping = {
     "../vendor/catppuccin-mocha.tmTheme": ".config/yazi/Catppuccin-mocha.tmTheme",
     "../vendor/atuin-mocha.toml": ".config/atuin/themes/catppuccin-mocha-mauve.toml",
     "../nvim/lua/plugins/colorscheme.lua": ".config/nvim/lua/plugins/colorscheme.lua",
+    "../nvim/lua/plugins/sidekick.lua": ".config/nvim/lua/plugins/sidekick.lua",
     "wt-completions.fish": ".config/fish/completions/wt.fish",
 }
 manifest = []

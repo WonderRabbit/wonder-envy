@@ -1,0 +1,77 @@
+{
+  "tool": "folke/sidekick.nvim",
+  "release": "v2.3.0",
+  "commit": "53a2d3afa61e5fd2e17b270b5fa72e5493808304",
+  "recorded_at": "2026-09-11T19:51:12+09:00",
+  "configuration": {
+    "source": "local/nvim/lua/plugins/sidekick.lua",
+    "live_target": "~/.config/nvim/lua/plugins/sidekick.lua",
+    "nes_enabled": false,
+    "cli_mux_enabled": false,
+    "catppuccin_changed": false,
+    "keymaps": {
+      "<leader>aa": "select installed CLI",
+      "<leader>aC": "toggle Codex",
+      "<leader>af": "insert file reference without submit",
+      "<leader>av": "insert visual selection without submit"
+    }
+  },
+  "scenarios": [
+    {
+      "name": "fail-first plugin absence",
+      "invocation": "nvim --headless '+lua local ok = pcall(require, \"sidekick\"); assert(not ok)' '+cq'",
+      "observable": "SIDEKICK_REQUIRE_OK=false before installation",
+      "artifact": ".local-setup/ai-tooling/sidekick/baseline-absence.txt"
+    },
+    {
+      "name": "isolated stable install",
+      "invocation": "XDG_CONFIG_HOME=<temporary symlink to local/nvim> nvim --headless '+Lazy! install sidekick.nvim' '+qa'",
+      "observable": "Lazy checked out tags/v2.3.0 at 53a2d3afa61e5fd2e17b270b5fa72e5493808304; only sidekick.nvim was added to the lockfile",
+      "artifact": ".local-setup/ai-tooling/sidekick/lazy-install.txt"
+    },
+    {
+      "name": "configured options, mappings, and installed-tool filter",
+      "invocation": "XDG_CONFIG_HOME=<temporary config> nvim --headless '+lua require(\"lazy\").load({plugins={\"sidekick.nvim\"}}); ...' '+qa'",
+      "observable": "NES=false; MUX=false; four Space-prefixed mappings resolve with their descriptions; claude, codex, and opencode are installed",
+      "artifact": ".local-setup/ai-tooling/sidekick/final-setup-keymaps.txt"
+    },
+    {
+      "name": "live configuration mapping and load",
+      "invocation": "cmp -s local/nvim/lua/plugins/sidekick.lua ~/.config/nvim/lua/plugins/sidekick.lua; env -u NVIM nvim --headless '+lua require(\"lazy\").load({plugins={\"sidekick.nvim\"}}); ...' '+qa'",
+      "observable": "the source and live target match; LIVE_SIDEKICK_CONFIG=loaded; LIVE_NES=false; LIVE_MUX=false; LIVE_KEYMAP_COUNT=4",
+      "artifact": ".local-setup/ai-tooling/sidekick/live-config-load.txt",
+      "backup_manifest": "~/.local/state/wonder-envy/backups/20260911-194024-348976/manifest.json"
+    },
+    {
+      "name": "file and visual context transport without model submission",
+      "invocation": "nvim --headless with Sidekick loaded; render {file} and the fixture visual range",
+      "observable": "file reference is @local/ai-tools/sidekick/examples/context-fixture.lua; selection is local greeting = \"안녕하세요, Sidekick\"",
+      "artifact": ".local-setup/ai-tooling/sidekick/final-context-transport.txt"
+    },
+    {
+      "name": "actual Sidekick terminal starts and closes Codex",
+      "invocation": "nvim --headless -u .local-setup/ai-tooling/sidekick/pty/init.lua '+lua require(\"sidekick.cli\").toggle({name=\"codex\"}); ... terminal:close()' '+qa'",
+      "observable": "CODEX_SESSION_BACKEND=terminal; CODEX_SESSION_RUNNING=true; CODEX_TERMINAL_CLOSED=true",
+      "artifact": ".local-setup/ai-tooling/sidekick/actual-sidekick-codex-session.txt"
+    },
+    {
+      "name": "real Neovim PTY command surface",
+      "invocation": "expect -> env -u NVIM TERM=xterm-256color nvim -u .local-setup/ai-tooling/sidekick/pty/init.lua fixture.lua -> :lua require(\"sidekick.cli\").toggle({name=\"codex\",focus=true})",
+      "observable": "raw terminal stream contains the actual Neovim session and Sidekick toggle command; no model prompt text was sent",
+      "artifact": ".local-setup/ai-tooling/sidekick/pty/sidekick-codex-direct.ansi",
+      "limitation": "The available PTY emulator does not answer Neovim's DSR color request and no xterm.js web-terminal capture helper exists in this workspace, so this is an ANSI capture rather than a screenshot. The separate live-session scenario above proves process startup and closure."
+    },
+    {
+      "name": "operating-manual synchronization and lifecycle instructions",
+      "invocation": "rg -n 'apply-config|lazy-lock|cli close|tmux' menual/ai-tools/sidekick.md; git diff --no-index --check /dev/null menual/ai-tools/sidekick.md",
+      "observable": "the Korean manual requires reviewed apply-config before an isolated Sidekick update and explicitly syncs the live lockfile back to the repository; removal backs up and deletes both source and live config because apply-config does not delete stale targets; hide/toggle retains a terminal process, while cli close or Neovim exit ends it; health warnings may include tmux despite mux=false",
+      "artifact": "menual/ai-tools/sidekick.md"
+    }
+  ],
+  "not_verified": [
+    "Paid-model completion or any submitted AI prompt",
+    "Copilot authentication or Next Edit Suggestions, intentionally disabled",
+    "tmux, Zellij, Herdr session persistence, intentionally disabled"
+  ],
+  "private_backup": ".local-setup/ai-tooling/sidekick/backups/"
+}
