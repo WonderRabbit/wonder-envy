@@ -125,3 +125,7 @@ Homebrew Formula 203종, Caskroom 13개, 주요 전역 실행 디렉터리 942�
 테스트 전략은 없음이다. 사용자 요청에 따라 스킬 템플릿의 테스트·자동 검토·수동 QA·최종 검증 wave는 적용하지 않는다. 체크박스 수는 이전 작업 8개, QA 작업 0개다. commit·PR·배포도 범위가 아니다.
 
 계획 산출물은 현재 디렉터리의 Markdown뿐이다. 실제 Mac mini 설치는 이 계획을 읽고 새 장치에서 수행하는 별도 작업이다.
+
+## 후속 실행 계획
+
+- [16. Fish 기본 셸·Catppuccin·lsd](mac-mini-migration/16-fish-catppuccin-lsd.md): 2026-09-11 사용자 요청. Zsh 중심 정책을 Fish 중심으로 변경하고 계획 커밋·푸시 후 설치한다.

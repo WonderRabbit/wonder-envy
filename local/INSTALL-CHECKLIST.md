@@ -51,3 +51,15 @@
 - [ ] 이전 장치의 키·모델·DB·대화·사용자 dotfiles 자료 복원.
 
 커밋·푸시는 Git 이력과 원격 branch를 기준으로 확인한다. 이 문서에는 자기 자신의 commit hash를 중복 기록하지 않는다.
+
+## 16. Fish·Catppuccin·lsd 후속 작업
+
+- [ ] 계획 16 커밋·원격 main 푸시.
+- [ ] lsd 설치 및 Fish 목록 별칭.
+- [ ] Bass 연동과 nvm·Node·npm, SDKMAN·Java의 Fish 동작.
+- [ ] pyenv·Python·uv 및 mise task의 Fish 경로 검증.
+- [ ] macOS 로그인 셸을 Fish로 등록·변경.
+- [ ] Terminal·Ghostty·Herdr의 새 셸을 Fish로 변경.
+- [ ] Catppuccin Mocha 테마 적용 및 설정 로드 검증.
+- [ ] menual 사용법·테마 출처·실제 차이 기록.
+- [ ] 설치 결과 커밋·원격 main 푸시.
