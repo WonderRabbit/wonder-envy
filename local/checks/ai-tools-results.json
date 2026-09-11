@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-09-11T19:58:45+09:00",
+  "platform": "macOS Apple Silicon",
+  "homebrew_formula_count": 105,
+  "runtime_reuse": {
+    "node": "nvm Node 26.8.2",
+    "python": "pyenv CPython 3.14.7 with uv",
+    "new_runtime_manager_installed": false
+  },
+  "tools": {
+    "qmd": {
+      "version": "2.8.3",
+      "executable": "~/.nvm/versions/node/v26.8.2/bin/qmd",
+      "scope": "wonder-envy-menual: <repository>/menual/**/*.md only",
+      "indexed_files": 120,
+      "embedded_chunks": 176,
+      "data": ["~/.config/qmd/index.yml", "~/.cache/qmd/index.sqlite", "~/.cache/qmd/models/"],
+      "model_cache_size": "model files total about 2.2 GB (local du: 2.1G)",
+      "scenarios": [
+        {
+          "name": "public Korean manual keyword, vector, and hybrid retrieval",
+          "invocation": "fish local/ai-tools/node/checks/run.fish",
+          "observable": "exit 0; qmd=ok; fish-and-themes.md is first for Korean vector (0.63) and hybrid (1.0) queries",
+          "artifact": "local/ai-tools/node/results.json"
+        }
+      ],
+      "not_verified": ["global MCP client registration", "~/Volt indexing", "model quality benchmark"]
+    },
+    "repomix": {
+      "version": "1.18.0",
+      "executable": "~/.nvm/versions/node/v26.8.2/bin/repomix",
+      "config": "local/ai-tools/node/config/repomix.config.json",
+      "scenarios": [
+        {
+          "name": "allowlist and sensitive-path exclusion fixture",
+          "invocation": "fish local/ai-tools/node/checks/run.fish",
+          "observable": "exit 0; public sentinel included; credentials and .local-setup sentinels excluded; security check enabled",
+          "artifact": "local/ai-tools/node/results.json"
+        }
+      ],
+      "not_verified": ["external upload", "global MCP client registration"]
+    },
+    "promptfoo": {
+      "version": "0.123.0",
+      "executable": "~/.nvm/versions/node/v26.8.2/bin/promptfoo",
+      "data": ["~/.promptfoo", "~/.promptfoo/logs"],
+      "scenarios": [
+        {
+          "name": "offline echo success and deliberate assertion failure",
+          "invocation": "fish local/ai-tools/node/checks/run.fish",
+          "observable": "success fixture exits 0 with 2 passed test cases; deliberate failure exits 100 with 1 failed test case",
+          "artifact": "local/ai-tools/node/results.json"
+        }
+      ],
+      "not_verified": ["provider credentials", "paid model inference", "browser UI"]
+    },
+    "llm": {
+      "version": "0.35",
+      "executable": "~/.local/bin/llm",
+      "data": ["~/Library/Application Support/io.datasette.llm/", "~/Library/Application Support/io.datasette.llm/logs.db"],
+      "logging": "off",
+      "scenarios": [
+        {
+          "name": "offline temporary echo plugin lifecycle",
+          "invocation": "fish local/ai-tools/llm/check-offline.fish",
+          "observable": "exit 0; synthetic echo JSON validated; plugin removed; a later echo call exits nonzero with Unknown model",
+          "artifact": "local/ai-tools/llm/results.json"
+        }
+      ],
+      "not_verified": ["provider credentials", "paid API calls", "local model runtime"]
+    },
+    "sidekick_nvim": {
+      "release": "v2.3.0",
+      "commit": "53a2d3afa61e5fd2e17b270b5fa72e5493808304",
+      "source": "local/nvim/lua/plugins/sidekick.lua",
+      "live_target": "~/.config/nvim/lua/plugins/sidekick.lua",
+      "scenarios": [
+        {
+          "name": "mapped Sidekick declaration loads in live Neovim",
+          "invocation": "cmp -s local/nvim/lua/plugins/sidekick.lua ~/.config/nvim/lua/plugins/sidekick.lua && nvim --headless '+Lazy! load sidekick.nvim' '+lua assert(require(\"sidekick\"))' +qa",
+          "observable": "both commands exit 0; Sidekick loads from the mapped configuration with NES and mux disabled",
+          "artifact": "local/ai-tools/sidekick/results.json"
+        }
+      ],
+      "not_verified": ["submitted AI prompt", "paid-model completion", "Copilot NES", "mux session persistence"]
+    }
+  },
+  "integration": {
+    "scenario": "Sidekick apply-config mapping preserves existing targets",
+    "invocation": "python3 local/apply-config.py; python3 local/apply-config.py",
+    "observable": "first run applied 1 previously absent Sidekick file; second run reported Configuration already matches; no changes.",
+    "artifact": ".omo/evidence/ai-tools-integration-20260911/integration-verification.md"
+  },
+  "provider_setup_remaining": [
+    "LLM and Promptfoo provider credentials, model selection, cost approval, and real API calls",
+    "QMD and Repomix global MCP client registration",
+    "Any external-model transfer of QMD results or Repomix output"
+  ]
+}

@@ -2,6 +2,7 @@
 
 - [현재 설치 체크리스트](local/INSTALL-CHECKLIST.md)
 - [Obsidian 설치·Volt 구성 계획](.omo/plans/mac-mini-migration/17-obsidian-volt.md) · [프로젝트·카테고리 운영 매뉴얼](menual/obsidian.md)
+- [AI 보조 도구 5종 설치·운영](menual/ai-tools/README.md)
 - [설치 도구 전체 사용 매뉴얼·공식 링크](menual/README.md)
 
 **2026-09-11 로컬 설정 적용:** 현재 Mac에 공통 개발 도구·런타임·셸 설정과 주요 AI CLI를 설치했다. 실제 설치 버전, 검증 결과, 로그인 및 원본 자료가 필요한 잔여 항목은 [로컬 설정 결과](local/README.md)에 기록했다. 아래와 `.omo`의 조사 당시 상태는 과거 기록으로 보존한다.

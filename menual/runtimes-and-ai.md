@@ -31,3 +31,25 @@
 Docker credential helper는 CLI가 로그인 자격 증명을 저장·조회할 때 사용하는 보조 실행 파일이다. 직접 토큰을 출력하는 명령을 매뉴얼에 포함하지 않는다. Docker 앱은 수동 DMG 설치이며 사용자 CLI 링크를 사용한다.
 
 현재 기본 셸과 nvm·SDKMAN 연동은 [Fish 상세 문서](fish-and-themes.md)를 따른다.
+
+## AI 보조 도구 5종
+
+QMD·Repomix·Promptfoo는 기존 nvm Node 26.8.2의 전역 npm CLI이고, LLM은 pyenv CPython 3.14.7을 지정한 uv tool이다. Sidekick.nvim은 기존 LazyVim 설정의 고정 플러그인이다. Homebrew Formula는 추가하지 않았으므로 설치 목록은 105개로 유지한다.
+
+| 도구 | 현재 고정값 | 실행·설정 위치 | API/인증 |
+| --- | --- | --- | --- |
+| QMD | `@tobilu/qmd` 2.8.3 | `~/.nvm/versions/node/v26.8.2/bin/qmd`, `~/.config/qmd/index.yml` | 로컬 모델 검색에는 불필요. 모델 최초 다운로드는 네트워크 필요. |
+| Repomix | 1.18.0 | `~/.nvm/versions/node/v26.8.2/bin/repomix`, 저장소 설정 `local/ai-tools/node/config/repomix.config.json` | 불필요. 생성물을 외부 모델에 올리면 별도 전송이다. |
+| Promptfoo | 0.123.0 | `~/.nvm/versions/node/v26.8.2/bin/promptfoo`, 결과 `~/.promptfoo/` 또는 지정한 출력 경로 | 로컬 `echo` fixture는 불필요. 외부 provider는 키·과금 필요. |
+| LLM | 0.35 | `~/.local/bin/llm`, `~/Library/Application Support/io.datasette.llm/` | 설치 기본값은 공급자 미연결·로그 꺼짐. 실제 모델은 별도 키·승인 필요. |
+| Sidekick.nvim | `v2.3.0` / `53a2d3a` | `~/.config/nvim/lua/plugins/sidekick.lua` | 자체 인증 없음. 선택한 Codex·Claude·OpenCode CLI의 인증을 사용. |
+
+공통 설치 명령은 기존 nvm·uv를 재사용한다. QMD의 공개 매뉴얼 컬렉션, 로컬 모델 다운로드와 색인은 의도적으로 별도 단계다.
+
+```fish
+cd ~/Workspace/Projects/wonder-envy
+fish local/ai-tools/install.fish
+# QMD 공개 매뉴얼 컬렉션/모델/색인: menual/ai-tools/qmd.md의 "처음 설정하기"
+```
+
+공통 절차와 각 도구의 데이터 경계·복구·검증 범위는 [AI 보조 도구 안내](ai-tools/README.md)에서 시작한다.

@@ -40,6 +40,20 @@ LazyVim 전환 백업은 `~/.local/state/wonder-envy/backups/lazyvim-20260911-13
 | Orca·Paseo | 기존 Orca 1.4.192·Paseo 0.7.2 유지, 앱 번들 CLI를 `~/.local/bin`에 연결 |
 | Docker | 공식 Docker Desktop 4.90.0 DMG 설치, Docker CLI 29.7.2·Compose 5.5.1·Buildx 0.36.1 연결 |
 
+## AI 보조 도구 5종 (2026-09-11)
+
+QMD 2.8.3, Repomix 1.18.0, Promptfoo 0.123.0, LLM 0.35, Sidekick.nvim `v2.3.0`(`53a2d3afa61e5fd2e17b270b5fa72e5493808304`)을 추가했다. Homebrew Formula는 추가하지 않아 목록은 105개를 유지한다. 공통 설치는 `fish local/ai-tools/install.fish`이며 기존 nvm·pyenv·uv를 사용한다. QMD의 공개 매뉴얼 컬렉션, 모델 다운로드, 색인은 이 명령과 별도로 [QMD 안내](../menual/ai-tools/qmd.md#처음-설정하기)를 따라 적용한다.
+
+| 도구 | 실제 경로·설정 | 로컬 확인과 경계 |
+| --- | --- | --- |
+| QMD | `~/.nvm/versions/node/v26.8.2/bin/qmd`; `~/.config/qmd/index.yml`; `~/.cache/qmd/index.sqlite` | `menual/**/*.md` 120개·176 chunk만 `wonder-envy-menual`로 색인했다. 세 모델 파일 합계는 약 2.2 GB(로컬 `du` 표기는 2.1G)이며 `~/Volt`는 포함하지 않았다. |
+| Repomix | `~/.nvm/versions/node/v26.8.2/bin/repomix`; `local/ai-tools/node/config/repomix.config.json` | 공개 sentinel 포함, credentials·`.local-setup` sentinel 제외 fixture가 통과했다. 생성물은 기본적으로 비공개 `.local-setup/ai-tooling/node/`에 둔다. |
+| Promptfoo | `~/.nvm/versions/node/v26.8.2/bin/promptfoo`; `~/.promptfoo/` | telemetry·update·remote generation·sharing을 껐고 로컬 `echo` 성공 fixture는 0, 의도 실패 fixture는 100으로 끝났다. 외부 provider는 설정하지 않았다. |
+| LLM | `~/.local/bin/llm`; `~/Library/Application Support/io.datasette.llm/` | pyenv CPython 3.14.7을 지정한 uv tool이며 기본 로그는 껐다. 임시 echo plugin은 제거했고 공급자 키·실제 추론은 실행하지 않았다. |
+| Sidekick.nvim | `~/.config/nvim/lua/plugins/sidekick.lua`; Lazy lock의 `sidekick.nvim` | NES·mux를 끄고, 설치된 CLI 선택과 제출하지 않는 파일/선택 영역 문맥 키 네 개를 확인했다. Codex terminal 시작·종료만 확인했으며 모델 프롬프트는 전송하지 않았다. |
+
+공개 결과는 [AI 도구 결과](checks/ai-tools-results.json), 도구별 receipt는 `local/ai-tools/{node,llm,sidekick}/results.json`에 있다. 실제 모델 API·유료 호출·공급자 인증·전역 MCP 등록은 이 설치의 재현 가능한 결과에 포함하지 않는다. 사용법·업데이트·제거·복구는 [AI 도구 공통 안내](../menual/ai-tools/README.md)와 도구별 매뉴얼을 따른다.
+
 Homebrew 공통 설치 목록은 [Brewfile](Brewfile)에 있다. eza·fd·fzf·stow·tree·zoxide·jq·sevenzip·Poppler·resvg와 Python 빌드 의존성도 포함한다. tmux·Alacritty·Gemini CLI·옛 Hermes Node 링크는 설치하지 않았다.
 
 기존 Orca·Paseo 앱은 이 작업에서 업데이트하거나 별도 daemon을 추가하지 않았다. OMO의 현재 플러그인 설정에서 Context7은 활성, Codegraph·git_bash MCP는 비활성이며 설치자 선택을 유지했다. 설치된 MCP의 로컬 파일 경로 존재는 확인했지만 서버 연결이나 OMO QA를 실행한 것은 아니다.

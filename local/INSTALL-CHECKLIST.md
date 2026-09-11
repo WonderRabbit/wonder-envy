@@ -37,6 +37,7 @@
 - [x] Worktrunk Fish 공식 autoload·completion 및 저장소 템플릿 반영.
 - [x] `brew bundle check`, 셸 구문·초기화, 재적용 무변경 확인.
 - [x] `menual/`에 Homebrew 105개와 런타임·AI·앱·플러그인 사용법·공식 링크 작성.
+- [x] Homebrew Formula 105개를 유지하며 QMD·Repomix·Promptfoo·LLM·Sidekick.nvim의 별도 설치·상세 운영 문서를 추가.
 - [x] 계획 14·15에 실제 차이와 완료 상태 반영.
 - [x] GitHub SSH 계정 확인 및 이 저장소에만 noreply commit identity 설정.
 
@@ -115,3 +116,19 @@
 - [x] 잘못된 ID 오류 처리 수정, 독립 실행에서 한글·셸 문법 보존과 review→done 확인.
 - [x] [사용 매뉴얼](../menual/obsidian-kanban.md)과 [설치 기록](checks/obsidian-kanban-results.json) 추가.
 - [ ] Claude Code·OpenCode의 새 모델 대화에서 사용자 프로젝트 작업으로 `/kanban` 활용.
+
+## 19. AI 보조 도구 5종
+
+계획: [AI 도구 설치·설정·상세 운영 문서](../.omo/plans/mac-mini-migration/18-ai-tooling-installation.md). 공통 사용법: [QMD·Repomix·Promptfoo·LLM·Sidekick.nvim](../menual/ai-tools/README.md). 2026-09-11 기준의 기계 판독 결과는 [AI 도구 결과](checks/ai-tools-results.json)이며, 각 실행의 공개 receipt는 `local/ai-tools/{node,llm,sidekick}/results.json`이다.
+
+- [x] 기존 nvm Node 26.8.2에 QMD 2.8.3·Repomix 1.18.0·Promptfoo 0.123.0을 정확한 npm 버전으로 설치. 새 런타임·Homebrew Formula는 추가하지 않았다.
+- [x] QMD `wonder-envy-menual` 컬렉션이 공개 `menual/**/*.md` 120개·176 chunk만 색인하고 기본 검색에서 제외됨을 확인. SQLite·sqlite-vec·Metal, 한국어 키워드·벡터·혼합 검색이 `fish-and-themes.md`를 반환했다.
+- [x] QMD의 임베딩·질의 확장·재순위 GGUF 모델 세 개를 로컬 cache에 받고 최신 fingerprint로 임베딩했다. 모델 파일 합계는 약 2.2 GB(로컬 `du` 표기는 2.1G)이며 `~/Volt`·인증 자료는 색인하지 않았다.
+- [x] Repomix 공개 fixture에서 public sentinel 포함, credentials·`.local-setup` sentinel 제외, security check 사용을 확인.
+- [x] Promptfoo local `echo` fixture는 test case 2개 통과·종료 0, 의도 실패 fixture는 case 1개 실패·종료 100을 확인. telemetry·update·remote generation·sharing을 껐고 API 키·유료 provider는 쓰지 않았다.
+- [x] pyenv CPython 3.14.7을 지정한 uv tool로 LLM 0.35 설치, `llm logs status`의 `Logging is OFF`, 임시 `llm-echo` 성공 뒤 제거와 제거 뒤 `Unknown model` 실패를 확인.
+- [x] Sidekick.nvim `v2.3.0`/`53a2d3afa61e5fd2e17b270b5fa72e5493808304`을 Lazy lock에 고정. NES·mux를 끄고 네 keymap, 실제 홈 설정 매핑·load, 문맥 삽입과 Codex terminal 시작·종료를 확인했다.
+- [x] `apply-config.py`에 `local/nvim/lua/plugins/sidekick.lua`만 추가 매핑. 기존 매핑은 모두 일치했고 새 target 하나만 만들었다; 즉시 재실행은 변경 0건이었다.
+- [ ] LLM·Promptfoo의 실제 공급자 키, 유료 API 호출, 모델 품질·과금, QMD/Repomix의 전역 MCP 클라이언트 등록은 사용자가 공급자·조직 정책을 정한 뒤 별도로 수행.
+
+확인 명령: `fish local/ai-tools/node/checks/run.fish`, `fish local/ai-tools/llm/check-offline.fish`, `nvim --headless '+Lazy! load sidekick.nvim' '+lua assert(require("sidekick"))' +qa`, `python3 local/apply-config.py`. 마지막 명령은 기존 파일이 다르면 비공개 `~/.local/state/wonder-envy/backups/`에 보관한 뒤 적용한다.

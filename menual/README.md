@@ -7,6 +7,7 @@
 - [LazyVim 상세 사용법](lazyvim.md)
 - [Obsidian 프로젝트·카테고리 운영 매뉴얼](obsidian.md)
 - [런타임·Python 도구·AI CLI](runtimes-and-ai.md)
+- [AI 보조 도구 5종: QMD·Repomix·Promptfoo·LLM·Sidekick.nvim](ai-tools/README.md)
 - [GUI 앱·폰트](applications.md)
 - [LazyVim 플러그인·Mason·OMO 보조 도구](plugins-and-helpers.md)
 - [설치 체크리스트](../local/INSTALL-CHECKLIST.md)

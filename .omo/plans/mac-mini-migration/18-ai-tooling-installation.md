@@ -16,10 +16,10 @@
 
 ## TODOs
 
-- [ ] A. Node 도구 설치: QMD·Repomix·Promptfoo 설치, 설정·재현 명세·개별 상세 매뉴얼 작성. npm 작업 직렬. QMD public collection·BM25·벡터/하이브리드, Repomix 포함/제외, Promptfoo 성공/실패 fixture를 실제 실행한다.
-- [ ] B. LLM 설치: 기존 pyenv Python의 uv tool 설치, 로그 비활성, 공급자 연결 안내·무과금 로컬 검증·개별 상세 매뉴얼 작성.
-- [ ] C. Sidekick 설치: LazyVim 설정·lockfile·백업·NES/mux 비활성·충돌 없는 키맵·실제 TUI 연결 검증·개별 상세 매뉴얼 작성.
-- [ ] D. 통합: A/B/C 완료 후 공통 명세·적용 스크립트·체크리스트·설치 상태·매뉴얼 인덱스 업데이트. 세션/임시 fixture 정리 및 설정 재적용 확인.
+- [x] A. Node 도구 설치: QMD·Repomix·Promptfoo 설치, 설정·재현 명세·개별 상세 매뉴얼 작성. npm 작업 직렬. QMD public collection·BM25·벡터/하이브리드, Repomix 포함/제외, Promptfoo 성공/실패 fixture를 실제 실행한다.
+- [x] B. LLM 설치: 기존 pyenv Python의 uv tool 설치, 로그 비활성, 공급자 연결 안내·무과금 로컬 검증·개별 상세 매뉴얼 작성.
+- [x] C. Sidekick 설치: LazyVim 설정·lockfile·백업·NES/mux 비활성·충돌 없는 키맵·실제 TUI 연결 검증·개별 상세 매뉴얼 작성.
+- [ ] D. 통합: 공통 문서 골격·명세 준비는 A/B/C와 병렬 수행하고, 실제 결과가 나온 뒤 적용 스크립트·체크리스트·설치 상태·매뉴얼 인덱스를 확정한다. 세션/임시 fixture 정리 및 설정 재적용 확인.
 
 ## Final Verification Wave
 
@@ -33,3 +33,14 @@
 ## 검증 및 실행 증거
 
 공유 가능한 결과는 `local/checks/ai-tools-results.json`, 상세 운영 문서는 `menual/ai-tools/`에 둔다. 설치 로그·개인 경로/인덱스·테스트 세션은 `.local-setup/` 또는 홈의 비공개 상태 디렉터리로 분리한다. 계획의 체크박스는 독립 검증 후에만 완료한다. 과정에서 차이가 발견되면 이 문서에 누적한다.
+
+## 실행 중 확인한 차이와 운영 결정
+
+- QMD의 로컬 모델 3종은 임베딩 약 318 MB, 질의 확장 약 1.2 GB, 재정렬 약 609 MB다. 패키지 설치와 컬렉션·모델·색인 준비는 재설치 문서에서 별도 단계로 구분한다. 공개 매뉴얼 컬렉션은 기본 검색에서 제외하며 `-c wonder-envy-menual`로 명시한다.
+- npm 전역 설치는 직접 패키지 버전을 고정한다. 저장소 `package-lock.json`은 의존성 해석 기록이며 전역 설치가 그 lockfile을 소비한다고 설명하지 않는다.
+- Sidekick의 `{file}`은 전체 파일 본문 대신 `@경로` 참조를 넣는다. 선택 영역은 선택한 텍스트이며 두 키 모두 자동 제출하지 않는다.
+- Sidekick은 실제 터미널 backend에서 Codex 실행·종료를 확인했다. PTY의 DSR 응답 및 xterm.js 캡처 도구가 없어 보관한 ANSI 기록을 렌더링된 화면 증거로 주장하지 않는다.
+- LLM 검증에는 임시 `llm-echo` 공급자를 사용하고 제거한다. 패키지 취득에 네트워크가 필요할 수 있지만 fixture 실행은 모델 API 호출이 아니다.
+
+- Repomix 1.18.0에서 globstar와 파일명 부분 일치 조합의 제외가 실패했다. 현재 공개 경로 깊이를 덮는 명시적 패턴으로 바꾸고 원래 `menual/secret-notes.md` 실패 사례를 다시 통과시켰다. 더 깊은 공개 경로 추가 시 패턴과 검증을 함께 확장한다.
+- 최종 공개 매뉴얼 색인은 120개 파일·176개 벡터다. 독립 검증의 한국어 벡터/혼합 검색은 `fish-and-themes.md`를 첫 결과로 반환했다. Promptfoo 성공 2건은 assertion 수가 아닌 테스트 케이스 수다.
