@@ -1,0 +1,92 @@
+{
+  "$schema": "https://repomix.com/schemas/latest/schema.json",
+  "input": {
+    "maxFileSize": 500000
+  },
+  "output": {
+    "filePath": ".local-setup/ai-tooling/node/repomix-output.xml",
+    "style": "xml",
+    "parsableStyle": true,
+    "compress": false,
+    "fileSummary": true,
+    "directoryStructure": true,
+    "files": true,
+    "removeComments": false,
+    "removeEmptyLines": false,
+    "topFilesLength": 10,
+    "showLineNumbers": true,
+    "truncateBase64": true,
+    "git": {
+      "sortByChanges": false,
+      "includeDiffs": false,
+      "includeLogs": false
+    }
+  },
+  "include": [
+    "AGENTS.md",
+    "local/Brewfile",
+    "local/config/**",
+    "local/checks/**",
+    "local/nvim/**",
+    "local/ai-tools/**",
+    "menual/**"
+  ],
+  "ignore": {
+    "useGitignore": true,
+    "useDefaultPatterns": true,
+    "customPatterns": [
+      ".local-setup/**",
+      ".omo/**",
+      ".env*",
+      "*/.env*",
+      "*/*/.env*",
+      "*/*/*/.env*",
+      "*/*/*/*/.env*",
+      "*credentials*",
+      "*/*credentials*",
+      "*/*/*credentials*",
+      "*/*/*/*credentials*",
+      "*/*/*/*/*credentials*",
+      "*secret*",
+      "*/*secret*",
+      "*/*/*secret*",
+      "*/*/*/*secret*",
+      "*/*/*/*/*secret*",
+      "*token*",
+      "*/*token*",
+      "*/*/*token*",
+      "*/*/*/*token*",
+      "*/*/*/*/*token*",
+      "**/*credentials*/**",
+      "**/*secret*/**",
+      "**/*token*/**",
+      "*.pem",
+      "*/*.pem",
+      "*/*/*.pem",
+      "*/*/*/*.pem",
+      "*/*/*/*/*.pem",
+      "*.key",
+      "*/*.key",
+      "*/*/*.key",
+      "*/*/*/*.key",
+      "*/*/*/*/*.key",
+      "id_rsa*",
+      "*/id_rsa*",
+      "*/*/id_rsa*",
+      "*/*/*/id_rsa*",
+      "*/*/*/*/id_rsa*",
+      "**/private/**",
+      "*.bak",
+      "*/*.bak",
+      "*/*/*.bak",
+      "*/*/*/*.bak",
+      "*/*/*/*/*.bak"
+    ]
+  },
+  "security": {
+    "enableSecurityCheck": true
+  },
+  "tokenCount": {
+    "encoding": "o200k_base"
+  }
+}

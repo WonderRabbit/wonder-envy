@@ -1,0 +1,11 @@
+description: 실패 종료와 보고 형식을 확인하는 의도된 실패 예제
+prompts:
+  - "공개 fixture 응답"
+providers:
+  - id: echo
+    label: 로컬 echo
+tests:
+  - description: 존재하지 않는 문구를 요구해 실패시킨다
+    assert:
+      - type: contains
+        value: "이 문구는 출력에 없음"

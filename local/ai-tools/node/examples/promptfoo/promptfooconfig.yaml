@@ -1,0 +1,23 @@
+description: 공개 문자열을 사용하는 무과금 로컬 평가 예제
+prompts:
+  - "도구={{tool}}; 역할={{role}}"
+providers:
+  - id: echo
+    label: 로컬 echo
+tests:
+  - description: QMD 역할 설명이 치환된다
+    vars:
+      tool: QMD
+      role: 여러 Markdown 문서 검색
+    assert:
+      - type: contains
+        value: "도구=QMD"
+      - type: contains
+        value: "여러 Markdown 문서 검색"
+  - description: Repomix 역할 설명이 치환된다
+    vars:
+      tool: Repomix
+      role: 선택한 공개 파일 묶기
+    assert:
+      - type: equals
+        value: "도구=Repomix; 역할=선택한 공개 파일 묶기"

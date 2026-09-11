@@ -1,0 +1,23 @@
+# ~/.config/qmd/index.yml에 기존 설정과 병합하는 예시다.
+# /ABSOLUTE/PATH/TO/wonder-envy 부분은 실제 저장소 절대 경로로 바꾼다.
+collections:
+  wonder-envy-menual:
+    path: /ABSOLUTE/PATH/TO/wonder-envy/menual
+    pattern: "**/*.md"
+    ignore:
+      - "**/.env*"
+      - "**/*credentials*"
+      - "**/*secret*"
+      - "**/*token*"
+      - "**/*.pem"
+      - "**/*.key"
+      - "**/id_rsa*"
+      - "**/private/**"
+      - "**/*.bak"
+    includeByDefault: false
+    context:
+      "": wonder-envy의 공개 한국어 설치 및 운영 매뉴얼
+models:
+  embed: hf:ggml-org/embeddinggemma-300M-GGUF/embeddinggemma-300M-Q8_0.gguf
+  generate: hf:tobil/qmd-query-expansion-1.7B-gguf/qmd-query-expansion-1.7B-q4_k_m.gguf
+  rerank: hf:ggml-org/Qwen3-Reranker-0.6B-Q8_0-GGUF/qwen3-reranker-0.6b-q8_0.gguf

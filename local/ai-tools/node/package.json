@@ -1,0 +1,15 @@
+{
+  "name": "wonder-envy-node-ai-tools",
+  "private": true,
+  "description": "Pinned manifests for the globally installed Node.js AI helper CLIs",
+  "engines": {
+    "node": ">=22.22.0",
+    "npm": ">=11"
+  },
+  "packageManager": "npm@11.19.1",
+  "dependencies": {
+    "@tobilu/qmd": "2.8.3",
+    "promptfoo": "0.123.0",
+    "repomix": "1.18.0"
+  }
+}

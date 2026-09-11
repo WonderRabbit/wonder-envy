@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-09-11T19:58:45+09:00",
+  "platform": "macOS Apple Silicon",
+  "runtime": {
+    "node": "26.8.2",
+    "npm": "11.19.1",
+    "manager": "existing nvm",
+    "new_runtime_installed": false
+  },
+  "tools": {
+    "qmd": {
+      "package": "@tobilu/qmd",
+      "version": "2.8.3",
+      "executable": "~/.nvm/versions/node/v26.8.2/bin/qmd",
+      "config": "~/.config/qmd/index.yml",
+      "index": "~/.cache/qmd/index.sqlite",
+      "models_directory": "~/.cache/qmd/models",
+      "collection": {
+        "name": "wonder-envy-menual",
+        "scope": "<repository>/menual/**/*.md",
+        "include_by_default": false,
+        "files": 120,
+        "embedded_chunks": 176
+      },
+      "models": [
+        {
+          "role": "embedding",
+          "file": "hf_ggml-org_embeddinggemma-300M-Q8_0.gguf",
+          "bytes": 333590944,
+          "available": true
+        },
+        {
+          "role": "query_expansion",
+          "file": "hf_tobil_qmd-query-expansion-1.7B-q4_k_m.gguf",
+          "bytes": 1282438912,
+          "available": true
+        },
+        {
+          "role": "reranking",
+          "file": "hf_ggml-org_qwen3-reranker-0.6b-q8_0.gguf",
+          "bytes": 639153184,
+          "available": true
+        }
+      ],
+      "checks": {
+        "doctor": "pass: SQLite, sqlite-vec, model cache, Metal device and vector sample",
+        "keyword": "pass: scoped results include fish-and-themes.md",
+        "korean_vector": "pass: fish-and-themes.md ranked first with score 0.63",
+        "korean_hybrid": "pass: fish-and-themes.md ranked first with score 1.0",
+        "embedding_freshness": "pass: all active documents use current fingerprint"
+      }
+    },
+    "repomix": {
+      "package": "repomix",
+      "version": "1.18.0",
+      "executable": "~/.nvm/versions/node/v26.8.2/bin/repomix",
+      "config": "local/ai-tools/node/config/repomix.config.json",
+      "default_output": ".local-setup/ai-tooling/node/repomix-output.xml",
+      "checks": {
+        "actual_config_fixture": "pass",
+        "public_sentinel_included": true,
+        "secret_filename_sentinel_excluded": true,
+        "private_credentials_sentinel_excluded": true,
+        "local_setup_sentinel_excluded": true,
+        "real_repository_files": 180,
+        "real_repository_tokens": 126399,
+        "paths_outside_allowlist": 0,
+        "private_paths_in_output": 0,
+        "security_check_enabled": true
+      }
+    },
+    "promptfoo": {
+      "package": "promptfoo",
+      "version": "0.123.0",
+      "executable": "~/.nvm/versions/node/v26.8.2/bin/promptfoo",
+      "data_directory": "~/.promptfoo",
+      "logs_directory": "~/.promptfoo/logs",
+      "privacy_environment": [
+        "PROMPTFOO_DISABLE_TELEMETRY=1",
+        "PROMPTFOO_DISABLE_UPDATE=1",
+        "PROMPTFOO_DISABLE_REMOTE_GENERATION=true",
+        "PROMPTFOO_DISABLE_SHARING=1"
+      ],
+      "checks": {
+        "provider": "echo",
+        "paid_provider_used": false,
+        "api_key_used": false,
+        "success_fixture": {
+          "exit_code": 0,
+          "passed": 2,
+          "failed": 0,
+          "errors": 0
+        },
+        "deliberate_failure_fixture": {
+          "exit_code": 100,
+          "passed": 0,
+          "failed": 1,
+          "errors": 0
+        }
+      }
+    }
+  },
+  "verification": {
+    "command": "fish local/ai-tools/node/checks/run.fish",
+    "outcome": "qmd=ok repomix=ok promptfoo_pass=ok promptfoo_expected_failure_exit=100",
+    "private_evidence": ".local-setup/ai-tooling/node/",
+    "review_evidence": ".omo/evidence/node-ai-tools/verification.md"
+  },
+  "resources": {
+    "qmd_cache_size": "2.1G",
+    "promptfoo_data_size": "520K",
+    "temporary_fixture_removed": true,
+    "final_refresh_orphaned_qmd_chunks_removed": 6,
+    "background_services_left_running": false,
+    "tmux_sessions_started": false
+  },
+  "observed_warnings_and_limits": [
+    "Promptfoo on Node 26 prints an experimental DecompressInterceptor warning; fixture behavior and exit codes remained correct.",
+    "npm 11 reported optional install scripts that were not allowlisted; the verified CLI paths did not require those optional features.",
+    "No paid or remote LLM provider, browser UI, watch mode, or global MCP client registration was tested.",
+    "QMD indexed only the public repository manual tree; ~/Volt was not indexed."
+  ]
+}
